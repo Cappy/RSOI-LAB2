@@ -39,7 +39,7 @@ namespace CustomersAPIServices.Controllers
 
         // GET: api/Customers/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetCustomers([FromRoute] Guid id)
+        public async Task<IActionResult> GetCustomer([FromRoute] Guid id)
         {
             if (!ModelState.IsValid)
             {

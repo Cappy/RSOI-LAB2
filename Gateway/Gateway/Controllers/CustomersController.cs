@@ -20,6 +20,14 @@ namespace Gateway.Controllers
         public HttpClient client = new HttpClient();
         public APIServices services = new APIServices();
 
+        //List<Customer> customers = new List<Customer>();
+
+        //public CustomersController() { }
+        //public CustomersController(List<Customer>)
+        //{
+        //    this.customers = customers;
+        //}
+
         [HttpGet("customers")]
         public async Task<IActionResult> GetCustomers(int? page, int? size)
         {

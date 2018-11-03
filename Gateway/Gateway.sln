@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoomsAPIServices", "..\Room
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingAPIServices", "..\BookingAPIServices\BookingAPIServices\BookingAPIServices.csproj", "{2D047382-50E5-4066-BE0F-FA34E7323606}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayTests", "GatewayTests\GatewayTests.csproj", "{F1BD75EA-1533-48F1-A64E-316C11EFBEE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2D047382-50E5-4066-BE0F-FA34E7323606}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D047382-50E5-4066-BE0F-FA34E7323606}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D047382-50E5-4066-BE0F-FA34E7323606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1BD75EA-1533-48F1-A64E-316C11EFBEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1BD75EA-1533-48F1-A64E-316C11EFBEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1BD75EA-1533-48F1-A64E-316C11EFBEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1BD75EA-1533-48F1-A64E-316C11EFBEE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

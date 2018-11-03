@@ -25,9 +25,10 @@ C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\CustomersAPIServices\CustomersAPIServi
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\CustomersAPIServices\CustomersAPIServices\bin\Debug\netcoreapp2.0\CustomersAPIServices.runtimeconfig.dev.json
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\CustomersAPIServices\CustomersAPIServices\bin\Debug\netcoreapp2.0\CustomersAPIServices.dll
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\CustomersAPIServices\CustomersAPIServices\bin\Debug\netcoreapp2.0\CustomersAPIServices.pdb
-C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\CustomersAPIServices\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.csprojAssemblyReference.cache
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\CustomersAPIServices\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.csproj.CoreCompileInputs.cache
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\CustomersAPIServices\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.AssemblyInfoInputs.cache
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\CustomersAPIServices\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.AssemblyInfo.cs
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\CustomersAPIServices\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.dll
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\CustomersAPIServices\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.pdb
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\CustomersAPIServices\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.csprojAssemblyReference.cache
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\CustomersAPIServices\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.csprojResolveAssemblyReference.cache
