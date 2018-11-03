@@ -1,0 +1,4 @@
+start StartBookingService.bat
+start StartCustomersService.bat
+start StartRoomsService.bat
+start StartGateway.bat

@@ -1,0 +1,22 @@
+c:\users\pavel\documents\visual studio 2017\Projects\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.deps.json
+c:\users\pavel\documents\visual studio 2017\Projects\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.runtimeconfig.json
+c:\users\pavel\documents\visual studio 2017\Projects\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.runtimeconfig.dev.json
+c:\users\pavel\documents\visual studio 2017\Projects\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.dll
+c:\users\pavel\documents\visual studio 2017\Projects\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.csproj.CoreCompileInputs.cache
+c:\users\pavel\documents\visual studio 2017\Projects\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.AssemblyInfoInputs.cache
+c:\users\pavel\documents\visual studio 2017\Projects\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.AssemblyInfo.cs
+c:\users\pavel\documents\visual studio 2017\Projects\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.pdb
+c:\users\pavel\documents\visual studio 2017\Projects\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.dll
+c:\users\pavel\documents\visual studio 2017\Projects\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.pdb
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.csprojAssemblyReference.cache
+C:\Users\Pavel\Desktop\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.deps.json
+C:\Users\Pavel\Desktop\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.runtimeconfig.json
+C:\Users\Pavel\Desktop\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.runtimeconfig.dev.json
+C:\Users\Pavel\Desktop\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.dll
+C:\Users\Pavel\Desktop\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.pdb
+C:\Users\Pavel\Desktop\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.csprojAssemblyReference.cache
+C:\Users\Pavel\Desktop\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.csproj.CoreCompileInputs.cache
+C:\Users\Pavel\Desktop\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.AssemblyInfoInputs.cache
+C:\Users\Pavel\Desktop\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.AssemblyInfo.cs
+C:\Users\Pavel\Desktop\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.dll
+C:\Users\Pavel\Desktop\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.pdb

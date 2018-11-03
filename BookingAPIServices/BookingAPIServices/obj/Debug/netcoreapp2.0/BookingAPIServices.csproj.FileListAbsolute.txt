@@ -1,0 +1,22 @@
+c:\users\pavel\documents\visual studio 2017\Projects\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.deps.json
+c:\users\pavel\documents\visual studio 2017\Projects\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.runtimeconfig.json
+c:\users\pavel\documents\visual studio 2017\Projects\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.runtimeconfig.dev.json
+c:\users\pavel\documents\visual studio 2017\Projects\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.dll
+c:\users\pavel\documents\visual studio 2017\Projects\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.csproj.CoreCompileInputs.cache
+c:\users\pavel\documents\visual studio 2017\Projects\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.AssemblyInfoInputs.cache
+c:\users\pavel\documents\visual studio 2017\Projects\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.AssemblyInfo.cs
+c:\users\pavel\documents\visual studio 2017\Projects\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.pdb
+c:\users\pavel\documents\visual studio 2017\Projects\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.dll
+c:\users\pavel\documents\visual studio 2017\Projects\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.pdb
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.csprojAssemblyReference.cache
+C:\Users\Pavel\Desktop\RSOI-Lab2\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.deps.json
+C:\Users\Pavel\Desktop\RSOI-Lab2\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.runtimeconfig.json
+C:\Users\Pavel\Desktop\RSOI-Lab2\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.runtimeconfig.dev.json
+C:\Users\Pavel\Desktop\RSOI-Lab2\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.dll
+C:\Users\Pavel\Desktop\RSOI-Lab2\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.pdb
+C:\Users\Pavel\Desktop\RSOI-Lab2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.csprojAssemblyReference.cache
+C:\Users\Pavel\Desktop\RSOI-Lab2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.csproj.CoreCompileInputs.cache
+C:\Users\Pavel\Desktop\RSOI-Lab2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.AssemblyInfoInputs.cache
+C:\Users\Pavel\Desktop\RSOI-Lab2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.AssemblyInfo.cs
+C:\Users\Pavel\Desktop\RSOI-Lab2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.dll
+C:\Users\Pavel\Desktop\RSOI-Lab2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.pdb

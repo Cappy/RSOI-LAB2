@@ -1,0 +1,11 @@
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\Gateway\Gateway\bin\Debug\netcoreapp2.0\Gateway.deps.json
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\Gateway\Gateway\bin\Debug\netcoreapp2.0\Gateway.runtimeconfig.json
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\Gateway\Gateway\bin\Debug\netcoreapp2.0\Gateway.runtimeconfig.dev.json
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\Gateway\Gateway\bin\Debug\netcoreapp2.0\Gateway.dll
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\Gateway\Gateway\obj\Debug\netcoreapp2.0\Gateway.csprojResolveAssemblyReference.cache
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\Gateway\Gateway\obj\Debug\netcoreapp2.0\Gateway.csproj.CoreCompileInputs.cache
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\Gateway\Gateway\obj\Debug\netcoreapp2.0\Gateway.AssemblyInfoInputs.cache
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\Gateway\Gateway\obj\Debug\netcoreapp2.0\Gateway.AssemblyInfo.cs
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\Gateway\Gateway\bin\Debug\netcoreapp2.0\Gateway.pdb
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\Gateway\Gateway\obj\Debug\netcoreapp2.0\Gateway.dll
+C:\Users\Pavel\Documents\Visual Studio 2017\Projects\Gateway\Gateway\obj\Debug\netcoreapp2.0\Gateway.pdb
