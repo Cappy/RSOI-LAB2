@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RoomsAPIServices.Models;
 using PagedList;
+using Microsoft.Extensions.Logging;
 
 namespace RoomsAPIServices.Controllers
 {

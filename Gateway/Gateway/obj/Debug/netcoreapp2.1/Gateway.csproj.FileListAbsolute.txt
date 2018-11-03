@@ -31,3 +31,14 @@ C:\Users\Pavel\Desktop\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway
 C:\Users\Pavel\Desktop\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.AssemblyInfo.cs
 C:\Users\Pavel\Desktop\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.dll
 C:\Users\Pavel\Desktop\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.pdb
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\bin\Debug\netcoreapp2.1\Gateway.deps.json
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\bin\Debug\netcoreapp2.1\Gateway.runtimeconfig.json
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\bin\Debug\netcoreapp2.1\Gateway.runtimeconfig.dev.json
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\bin\Debug\netcoreapp2.1\Gateway.dll
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\bin\Debug\netcoreapp2.1\Gateway.pdb
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.csprojAssemblyReference.cache
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.csproj.CoreCompileInputs.cache
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.AssemblyInfoInputs.cache
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.AssemblyInfo.cs
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.dll
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.pdb
