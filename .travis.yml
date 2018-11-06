@@ -3,7 +3,6 @@ sudo: required
 dotnet: 2.1.300
 solution: ./Gateway/Gateway.sln
 dist: trusty 
-mono: none 
 
 install:
   - dotnet restore ./Gateway/Gateway.sln
