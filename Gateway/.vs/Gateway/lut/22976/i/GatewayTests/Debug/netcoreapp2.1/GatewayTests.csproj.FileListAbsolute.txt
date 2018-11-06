@@ -1,0 +1,13 @@
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\GatewayTests\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\GatewayTests\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\GatewayTests\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\GatewayTests\Debug\netcoreapp2.1\GatewayTests.deps.json
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\GatewayTests\Debug\netcoreapp2.1\GatewayTests.runtimeconfig.json
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\GatewayTests\Debug\netcoreapp2.1\GatewayTests.runtimeconfig.dev.json
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\GatewayTests\Debug\netcoreapp2.1\GatewayTests.dll
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\GatewayTests\Debug\netcoreapp2.1\GatewayTests.pdb
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\i\GatewayTests\Debug\netcoreapp2.1\GatewayTests.csproj.CoreCompileInputs.cache
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\i\GatewayTests\Debug\netcoreapp2.1\GatewayTests.AssemblyInfoInputs.cache
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\i\GatewayTests\Debug\netcoreapp2.1\GatewayTests.AssemblyInfo.cs
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\i\GatewayTests\Debug\netcoreapp2.1\GatewayTests.dll
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\i\GatewayTests\Debug\netcoreapp2.1\GatewayTests.pdb

@@ -97,12 +97,12 @@ namespace Gateway.Controllers
             }
             catch
             {
-                return StatusCode(StatusCodes.Status304NotModified);
+                return StatusCode(StatusCodes.Status400BadRequest);
             }
 
             if (room == null || customer == null)
             {
-                return StatusCode(StatusCodes.Status304NotModified);
+                return StatusCode(StatusCodes.Status400BadRequest);
             }
 
             HttpResponseMessage booking;

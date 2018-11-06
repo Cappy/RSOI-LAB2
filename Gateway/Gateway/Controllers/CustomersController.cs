@@ -23,10 +23,11 @@ namespace Gateway.Controllers
         //List<Customer> customers = new List<Customer>();
 
         //public CustomersController() { }
-        //public CustomersController(List<Customer>)
+        //public CustomersController(List<Customer> customers)
         //{
         //    this.customers = customers;
         //}
+
 
         [HttpGet("customers")]
         public async Task<IActionResult> GetCustomers(int? page, int? size)

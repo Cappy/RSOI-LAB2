@@ -1,0 +1,11 @@
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\Gateway\Debug\netcoreapp2.1\Gateway.deps.json
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\Gateway\Debug\netcoreapp2.1\Gateway.runtimeconfig.json
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\Gateway\Debug\netcoreapp2.1\Gateway.runtimeconfig.dev.json
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\Gateway\Debug\netcoreapp2.1\Gateway.dll
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\b\Gateway\Debug\netcoreapp2.1\Gateway.pdb
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\i\Gateway\Debug\netcoreapp2.1\Gateway.csprojResolveAssemblyReference.cache
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\i\Gateway\Debug\netcoreapp2.1\Gateway.csproj.CoreCompileInputs.cache
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\i\Gateway\Debug\netcoreapp2.1\Gateway.AssemblyInfoInputs.cache
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\i\Gateway\Debug\netcoreapp2.1\Gateway.AssemblyInfo.cs
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\i\Gateway\Debug\netcoreapp2.1\Gateway.dll
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\.vs\Gateway\lut\0\i\Gateway\Debug\netcoreapp2.1\Gateway.pdb
