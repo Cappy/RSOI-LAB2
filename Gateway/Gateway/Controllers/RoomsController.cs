@@ -37,7 +37,9 @@ namespace Gateway.Controllers
                 return NotFound();
             }
 
-            return Ok(rooms);
+            var Rooms = JsonConvert.DeserializeObject<Room>(rooms);
+
+            return Ok(Rooms);
         }
 
         [HttpGet("rooms/{id}")]
@@ -59,7 +61,9 @@ namespace Gateway.Controllers
                 return NotFound();
             }
 
-            return Ok(room);
+            var Room = JsonConvert.DeserializeObject<Room>(room);
+
+            return Ok(Room);
         }
 
         [HttpPut("rooms/{id}")]

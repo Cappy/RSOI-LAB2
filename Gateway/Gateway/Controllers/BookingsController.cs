@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Gateway.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
-
+using Newtonsoft.Json;
 
 namespace Gateway.Controllers
 {
@@ -37,7 +37,9 @@ namespace Gateway.Controllers
                 return NotFound();
             }
 
-            return Ok(bookings);
+            var Bookings = JsonConvert.DeserializeObject<Booking>(bookings);
+
+            return Ok(Bookings);
         }
 
         [HttpGet("bookings/{id}")]
@@ -59,7 +61,9 @@ namespace Gateway.Controllers
                 return NotFound();
             }
 
-            return Ok(booking);
+            var Booking = JsonConvert.DeserializeObject<Booking>(booking);
+
+            return Ok(Booking);
         }
 
         [HttpPut("bookings/{id}")]

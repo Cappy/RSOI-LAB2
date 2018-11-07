@@ -78,9 +78,9 @@ namespace Gateway.Controllers
                 }
             };
 
-            var json = JsonConvert.SerializeObject(result);
+            //var json = JsonConvert.SerializeObject(result);
 
-            return Ok(json);
+            return Ok(result);
         }
     }
 }

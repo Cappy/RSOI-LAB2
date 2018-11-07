@@ -48,7 +48,9 @@ namespace Gateway.Controllers
                 return NotFound();
             }
 
-            return Ok(customers);
+            var Customers = JsonConvert.DeserializeObject<Customer>(customers);
+
+            return Ok(Customers);
         }
 
         [HttpGet("customers/{id}")]
@@ -69,8 +71,10 @@ namespace Gateway.Controllers
             {
                 return NotFound();
             }
-            
-            return Ok(customer);
+
+            var Customer = JsonConvert.DeserializeObject<Customer>(customer);
+
+            return Ok(Customer);
         }
 
         [HttpPut("customers/{id}")]
