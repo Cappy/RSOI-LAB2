@@ -31,3 +31,14 @@ C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.dll
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.pdb
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.csprojAssemblyReference.cache
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.deps.json
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.runtimeconfig.json
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.runtimeconfig.dev.json
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.dll
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\bin\Debug\netcoreapp2.0\RoomsAPIServices.pdb
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.csprojAssemblyReference.cache
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.csproj.CoreCompileInputs.cache
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.AssemblyInfoInputs.cache
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.AssemblyInfo.cs
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.dll
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\RoomsAPIServices\RoomsAPIServices\obj\Debug\netcoreapp2.0\RoomsAPIServices.pdb

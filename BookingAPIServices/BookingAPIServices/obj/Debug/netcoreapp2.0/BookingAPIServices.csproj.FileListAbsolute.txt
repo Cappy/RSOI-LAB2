@@ -31,3 +31,14 @@ C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.dll
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.pdb
 C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.csprojAssemblyReference.cache
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.deps.json
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.runtimeconfig.json
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.runtimeconfig.dev.json
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.dll
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\bin\Debug\netcoreapp2.0\BookingAPIServices.pdb
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.csprojAssemblyReference.cache
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.csproj.CoreCompileInputs.cache
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.AssemblyInfoInputs.cache
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.AssemblyInfo.cs
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.dll
+C:\Users\cappy\Documents\GitHub\RSOI-LAB2\BookingAPIServices\BookingAPIServices\obj\Debug\netcoreapp2.0\BookingAPIServices.pdb
