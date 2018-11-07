@@ -37,7 +37,7 @@ namespace Gateway.Controllers
                 return NotFound();
             }
 
-            var Rooms = JsonConvert.DeserializeObject<Room>(rooms);
+            var Rooms = JsonConvert.DeserializeObject<List<Room>>(rooms);
 
             return Ok(Rooms);
         }
