@@ -18,6 +18,42 @@ namespace Gateway.Controllers
         public HttpClient client = new HttpClient();
         public APIServices services = new APIServices();
 
+        //all bookings of this customer
+        [HttpGet("customers/{id}/bookings")]
+        public async Task<IActionResult> GetBookingsOfCustomer(Guid id)
+        {
+            //HttpResponseMessage bookings;
+            //Booking bookings;
+            string bookings;
+            try
+            {
+                bookings = await client.GetStringAsync(services.bookingsAPI);
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable);
+            }
+
+            if (bookings == null)
+            {
+                return NotFound();
+            }
+
+            var bk = JsonConvert.DeserializeObject<List<Booking>>(bookings);
+            List<Booking> bkFiltered = new List<Booking>();
+            foreach (Booking entry in bk)
+            {
+                if (entry.CustomerId == id)
+                {
+                    bkFiltered.Add(entry);
+                }
+            }
+
+
+            return Ok(bkFiltered);
+
+        }
+
         [HttpGet("booking-with-info/{id}")]
         public async Task<IActionResult> GetBookingWithInfo(Guid id)
         {
