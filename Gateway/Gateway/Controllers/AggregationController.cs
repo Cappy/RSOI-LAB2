@@ -40,17 +40,9 @@ namespace Gateway.Controllers
             }
 
             var bk = JsonConvert.DeserializeObject<List<Booking>>(bookings);
-            List<Booking> bkFiltered = new List<Booking>();
-            foreach (Booking entry in bk)
-            {
-                if (entry.CustomerId == id)
-                {
-                    bkFiltered.Add(entry);
-                }
-            }
+            bk = bk.Where(x => x.CustomerId == id).ToList();
 
-
-            return Ok(bkFiltered);
+            return Ok(bk);
 
         }
 

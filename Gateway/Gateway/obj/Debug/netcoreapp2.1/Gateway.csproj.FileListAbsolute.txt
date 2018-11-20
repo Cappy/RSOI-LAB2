@@ -52,4 +52,4 @@ C:\Users\cappy\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.
 C:\Users\cappy\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.AssemblyInfo.cs
 C:\Users\cappy\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.dll
 C:\Users\cappy\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.pdb
-C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.csprojResolveAssemblyReference.cache
+C:\Users\Pavel\Documents\GitHub\RSOI-LAB2\Gateway\Gateway\obj\Debug\netcoreapp2.1\Gateway.csprojAssemblyReference.cache
