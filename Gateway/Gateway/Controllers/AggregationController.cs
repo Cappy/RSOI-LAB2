@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 
 namespace Gateway.Controllers
 {
-    [Route("")]
+    [Route("api/")]
     public class AggregationController : Controller
     {
         public HttpClient client = new HttpClient();

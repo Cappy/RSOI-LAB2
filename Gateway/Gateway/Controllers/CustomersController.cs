@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 
 namespace Gateway.Controllers
 {
-    [Route("")]
+    [Route("api/")]
     public class CustomersController : Controller
     {
 
@@ -104,6 +104,9 @@ namespace Gateway.Controllers
         public async Task<IActionResult> PostCustomer([FromBody] Customer customerModel)
         {
             HttpResponseMessage customer;
+
+            Guid id = Guid.NewGuid();
+            customerModel.CustomerId = id;
 
             try
             {

@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 
 namespace Gateway.Controllers
 {
-    [Route("")]
+    [Route("api/")]
     public class BookingsController : Controller
     {
 
@@ -110,6 +110,9 @@ namespace Gateway.Controllers
             }
 
             HttpResponseMessage booking;
+
+            Guid id = Guid.NewGuid();
+            bookingModel.BookingId = id;
 
             try
             {
