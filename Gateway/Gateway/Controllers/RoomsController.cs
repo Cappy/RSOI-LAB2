@@ -85,7 +85,7 @@ namespace Gateway.Controllers
             }
 
             //return Ok(client.GetStringAsync(customersAPI + $"/{id}"));
-            return Ok(room);
+            return Ok();
         }
 
         [HttpPost("rooms")]
@@ -111,7 +111,7 @@ namespace Gateway.Controllers
             }
 
             //return Ok(client.GetStringAsync(customersAPI + $"/{customerModel.CustomerId}"));
-            return Ok(room);
+            return Ok(roomModel);
 
         }
 

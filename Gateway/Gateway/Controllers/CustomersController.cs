@@ -96,8 +96,7 @@ namespace Gateway.Controllers
                 return NotFound();
             }
 
-            //return Ok(client.GetStringAsync(customersAPI + $"/{id}"));
-            return Ok(customer);
+            return Ok();
         }
 
         [HttpPost("customers")]
@@ -123,7 +122,7 @@ namespace Gateway.Controllers
             }
 
             //return Ok(client.GetStringAsync(customersAPI + $"/{customerModel.CustomerId}"));
-            return Ok(customer);
+            return Ok(customerModel);
 
         }
 

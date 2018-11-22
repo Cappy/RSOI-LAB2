@@ -85,7 +85,7 @@ namespace Gateway.Controllers
             }
 
             //return Ok(client.GetStringAsync(customersAPI + $"/{id}"));
-            return Ok(booking);
+            return Ok();
         }
 
         [HttpPost("bookings")]
@@ -129,7 +129,7 @@ namespace Gateway.Controllers
             }
 
             //return Ok(client.GetStringAsync(customersAPI + $"/{customerModel.CustomerId}"));
-            return Ok(booking);
+            return Ok(bookingModel);
 
         }
 
