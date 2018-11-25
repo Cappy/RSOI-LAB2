@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CustomersAPIServices.Models;
 using PagedList;
+using System.Text.RegularExpressions;
 
 namespace CustomersAPIServices.Controllers
 {
@@ -65,6 +66,11 @@ namespace CustomersAPIServices.Controllers
                 return BadRequest(ModelState);
             }
 
+            if (!IsPhoneNumber(customers.PhoneNumber))
+            {
+                return new StatusCodeResult(StatusCodes.Status400BadRequest);
+            }
+
             if (id != customers.CustomerId)
             {
                 return BadRequest();
@@ -100,6 +106,11 @@ namespace CustomersAPIServices.Controllers
                 return BadRequest(ModelState);
             }
 
+            if (!IsPhoneNumber(customers.PhoneNumber))
+            {
+                return new StatusCodeResult(StatusCodes.Status400BadRequest);
+            }
+
             _context.Customers.Add(customers);
             try
             {
@@ -118,6 +129,11 @@ namespace CustomersAPIServices.Controllers
             }
 
             return CreatedAtAction("GetCustomers", new { id = customers.CustomerId }, customers);
+        }
+
+        public static bool IsPhoneNumber(string number)
+        {
+            return Regex.Match(number, @"^(\+[0-9]{11})$").Success;
         }
 
         // DELETE: api/Customers/5

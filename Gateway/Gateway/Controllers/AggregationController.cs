@@ -110,5 +110,72 @@ namespace Gateway.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet("bookings-with-info")]
+        public async Task<IActionResult> GetBookings(int? page, int? size)
+        {
+            string bookings;
+            try
+            {
+                bookings = await client.GetStringAsync(services.bookingsAPI + $"?page={page}&size={size}");
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable);
+            }
+
+            if (bookings == null)
+            {
+                return NotFound();
+            }
+
+            // var bk = JsonConvert.DeserializeObject<List<Booking>>(booking);
+            var Bookings = JsonConvert.DeserializeObject<List<Booking>>(bookings);
+
+            string customer;
+            string room;
+
+            var result = new List<BookingWithInfo>();
+
+            foreach (Booking bk in Bookings)
+            {
+                try
+                {
+                    customer = await client.GetStringAsync(services.customersAPI + $"/{bk.CustomerId}");
+                    room = await client.GetStringAsync(services.roomsAPI + $"/{bk.RoomId}");
+                }
+                catch
+                {
+                    return StatusCode(StatusCodes.Status503ServiceUnavailable);
+                }
+
+                Customer cs = JsonConvert.DeserializeObject<Customer>(customer);
+                Room rm = JsonConvert.DeserializeObject<Room>(room);
+
+
+                var entry = new BookingWithInfo
+                {
+                    BookingId = bk.BookingId,
+                    customer = new Customer
+                    {
+                        CustomerId = cs.CustomerId,
+                        Name = cs.Name,
+                        Surname = cs.Surname,
+                        PhoneNumber = cs.PhoneNumber
+                    },
+                    room = new Room
+                    {
+                        RoomId = rm.RoomId,
+                        Number = rm.Number,
+                        Cost = rm.Cost
+                    }
+                };
+
+                result.Add(entry);
+          
+            }
+
+            return Ok(result);
+        }
     }
 }

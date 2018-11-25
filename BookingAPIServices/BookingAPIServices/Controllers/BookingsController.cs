@@ -77,6 +77,11 @@ namespace BookingAPIServices.Controllers
                 return BadRequest();
             }
 
+            if (booking.CustomerId == null || booking.RoomId == null || booking.BookingId == null)
+            {
+                return BadRequest();
+            }
+
             _context.Entry(booking).State = EntityState.Modified;
 
             try

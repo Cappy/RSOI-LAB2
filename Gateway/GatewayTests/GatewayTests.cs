@@ -213,11 +213,11 @@ namespace GatewayTests
         private List<Customer> GetTestCustomers()
         {
             var testCustomers = new List<Customer>();
-            testCustomers.Add(new Customer { CustomerId = new Guid("ce5a43e6-1d8d-47dd-a503-67a4ba3f3f31"), Name = "Darlene", Surname = "Johns", PhoneNumber = 3213883 });
-            testCustomers.Add(new Customer { CustomerId = new Guid("15dc56f2-2dbd-42bd-84c3-dd0de5ac9cb8"), Name = "Mcgee", Surname = "Weeks", PhoneNumber = 9016332 });
-            testCustomers.Add(new Customer { CustomerId = new Guid("11e40ea0-f928-4328-b600-d7d6ce784c4d"), Name = "Adkins", Surname = "Beach", PhoneNumber = 9016332 });
-            testCustomers.Add(new Customer { CustomerId = new Guid("f05d8278-e37e-4c99-aae3-35a84f63cf02"), Name = "Bertha", Surname = "Tucker", PhoneNumber = 6377939 });
-            testCustomers.Add(new Customer { CustomerId = new Guid("ea0543cc-61ab-4891-9877-a7a55cff3c80"), Name = "Holden", Surname = "Rivera", PhoneNumber = 4994753 });
+            //testCustomers.Add(new Customer { CustomerId = new Guid("ce5a43e6-1d8d-47dd-a503-67a4ba3f3f31"), Name = "Darlene", Surname = "Johns", PhoneNumber = 3213883 });
+            //testCustomers.Add(new Customer { CustomerId = new Guid("15dc56f2-2dbd-42bd-84c3-dd0de5ac9cb8"), Name = "Mcgee", Surname = "Weeks", PhoneNumber = 9016332 });
+            //testCustomers.Add(new Customer { CustomerId = new Guid("11e40ea0-f928-4328-b600-d7d6ce784c4d"), Name = "Adkins", Surname = "Beach", PhoneNumber = 9016332 });
+            //testCustomers.Add(new Customer { CustomerId = new Guid("f05d8278-e37e-4c99-aae3-35a84f63cf02"), Name = "Bertha", Surname = "Tucker", PhoneNumber = 6377939 });
+            //testCustomers.Add(new Customer { CustomerId = new Guid("ea0543cc-61ab-4891-9877-a7a55cff3c80"), Name = "Holden", Surname = "Rivera", PhoneNumber = 4994753 });
 
             return testCustomers;
         }
