@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 
 namespace Gateway.Controllers
 {
-    [Route("")]
+    [Route("api/")]
     public class RoomsController : Controller
     {
 
@@ -85,13 +85,17 @@ namespace Gateway.Controllers
             }
 
             //return Ok(client.GetStringAsync(customersAPI + $"/{id}"));
-            return Ok(room);
+            return Ok();
         }
 
         [HttpPost("rooms")]
         public async Task<IActionResult> PostRoom([FromBody] Room roomModel)
         {
             HttpResponseMessage room;
+
+            Guid id = Guid.NewGuid();
+            roomModel.RoomId = id;
+
             try
             {
                 room = await client.PostAsJsonAsync(services.roomsAPI, roomModel);
@@ -107,7 +111,7 @@ namespace Gateway.Controllers
             }
 
             //return Ok(client.GetStringAsync(customersAPI + $"/{customerModel.CustomerId}"));
-            return Ok(room);
+            return Ok(roomModel);
 
         }
 
