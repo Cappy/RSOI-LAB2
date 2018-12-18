@@ -109,5 +109,41 @@ namespace Gateway.Controllers
             }
 
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+
+            var re = Request;
+            var headers = re.Headers;
+            string token = null;
+            StringValues headerValues;
+            if (headers.TryGetValue("Authorization", out headerValues))
+            {
+                token = headerValues.FirstOrDefault().Substring(7);
+            }
+
+            HttpResponseMessage users;
+            try
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                users = await client.DeleteAsync(services.authAPI + "/" + id);
+
+                if (users.IsSuccessStatusCode)
+                {
+                    return Ok();
+                }
+                else
+                {
+                    return Unauthorized();
+                }
+
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable);
+            }
+
+        }
     }
 }

@@ -1,3 +1,4 @@
+start StartAuthService.bat
 start StartBookingService.bat
 start StartCustomersService.bat
 start StartRoomsService.bat
