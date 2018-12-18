@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>e093dd8e-54a9-41b3-b4dd-af53a72ba4d2</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.0" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+</Project>

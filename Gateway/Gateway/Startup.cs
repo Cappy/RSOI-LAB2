@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Gateway
 {
@@ -18,6 +20,7 @@ namespace Gateway
             services.AddCors();
 
             services.AddMvc();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -31,7 +34,13 @@ namespace Gateway
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
-            app.UseCors(builder => builder.WithOrigins("http://localhost:4200/"));
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
+
+            //app.UseAuthentication();
 
             app.UseMvc();
         }
