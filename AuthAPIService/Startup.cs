@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Auth.Entities;
 using System;
+using System.Security.Claims;
 
 namespace Auth
 {
@@ -38,6 +39,12 @@ namespace Auth
             //services.AddDbContext<UserContext>(options => options.UseMySQL(connection));
 
             services.AddDbContext<UserContext>(options =>
+            options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<TokensContext>(options =>
+            options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<OAuth2TokensContext>(options =>
             options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc();
@@ -80,12 +87,26 @@ namespace Auth
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
+                    ValidateLifetime = true,
+                    LifetimeValidator = CustomLifetimeValidator,
+                    RequireExpirationTime = true,
                     ValidateAudience = false
                 };
             });
 
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IOAuth2TokenService, OAuth2TokenService>();
+        }
+
+        private bool CustomLifetimeValidator(DateTime? notBefore, DateTime? expires, SecurityToken token, TokenValidationParameters @params)
+        {
+            if (expires != null)
+            {
+                return (expires > DateTime.Now);
+            }
+            return false;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

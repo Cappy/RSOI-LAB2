@@ -73,6 +73,32 @@ namespace Gateway.Controllers
 
         }
 
+        [HttpPost("get-oauth2-token")]
+        public async Task<IActionResult> GetOA2Token([FromBody]CurUser userModel)
+        {
+            HttpResponseMessage user;
+            try
+            {
+                user = await client.PostAsJsonAsync(services.authAPI + "/" + "get-oauth2-token", userModel);
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable);
+            }
+
+            if (user.IsSuccessStatusCode)
+            {
+                var User = await user.Content.ReadAsAsync<CurUser>();
+                return Ok(new { User.Token });
+            }
+            else
+            {
+                var message = user.Content.ReadAsAsync<ErrorMessage>().Result;
+                return BadRequest(message);
+            }
+
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {

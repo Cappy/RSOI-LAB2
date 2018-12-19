@@ -13,24 +13,30 @@ using Auth.Services;
 using Auth.Dtos;
 using Auth.Entities;
 
-namespace WebApi.Controllers
+namespace Auth.Controllers
 {
     [Authorize]
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
         private IUserService _userService;
+        private ITokenService _tokenService;
+        private IOAuth2TokenService _OAuth2TokenService;
         private IMapper _mapper;
         private readonly AppSettings _appSettings;
 
         public UsersController(
+            ITokenService tokenService,
+            IOAuth2TokenService OAuth2TokenService,
             IUserService userService,
             IMapper mapper,
             IOptions<AppSettings> appSettings)
         {
             _userService = userService;
             _mapper = mapper;
+            _tokenService = tokenService;
+            _OAuth2TokenService = OAuth2TokenService;
             _appSettings = appSettings.Value;
         }
 
@@ -43,20 +49,49 @@ namespace WebApi.Controllers
             if (user == null)
                 return BadRequest(new { message = "Username or password is incorrect" });
 
+            string tokenString;
+
+            try
+            {
+                if (_tokenService.GetTokenByUID(user.UserId) != null)
+                {
+                    tokenString = _tokenService.GetTokenByUID(user.UserId);
+                    return Ok(new
+                    {
+                        UserId = user.UserId,
+                        Username = user.Username,
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        Token = tokenString
+                    });
+                }
+            }
+            catch
+            {
+                return BadRequest();
+            }
+
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new Claim[] 
+                Subject = new ClaimsIdentity(new Claim[]
                 {
                     new Claim(ClaimTypes.Name, user.UserId.ToString())
                 }),
-                Expires = DateTime.UtcNow.AddMinutes(30),
+                Expires = DateTime.Now.AddMinutes(211),  //????
+                Issuer = "HotelApp",
+                Audience = "HotelApp",
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            var tokenString = tokenHandler.WriteToken(token);
+            tokenString = tokenHandler.WriteToken(token);
+
+            //adding token to db
+
+            _tokenService.AddToken(tokenString, user.UserId);
+
 
 
             // return basic user info (without password) and token to store client side
@@ -65,6 +100,57 @@ namespace WebApi.Controllers
                 Username = user.Username,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
+                Token = tokenString
+            });
+        }
+
+        [AllowAnonymous]
+        [HttpPost("get-oauth2-token")]
+        public IActionResult GetOAuth2Token([FromBody]CurUser userModel)
+        {
+
+            string tokenString;
+
+            try
+            {
+                if (_OAuth2TokenService.GetTokenByUID(userModel.UserId) != null)
+                {
+                    tokenString = _OAuth2TokenService.GetTokenByUID(userModel.UserId);
+                    return Ok(new
+                    {
+                        Token = tokenString
+                    });
+                }
+            }
+            catch
+            {
+                return BadRequest();
+            }
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new Claim[]
+                {
+                    new Claim(ClaimTypes.Name, userModel.Token.ToString())
+                }),
+                Expires = DateTime.Now.AddMinutes(211),  //????
+                Issuer = "HotelApp",
+                Audience = "HotelApp",
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            tokenString = tokenHandler.WriteToken(token);
+
+            //adding token to db
+            _OAuth2TokenService.AddToken(tokenString, userModel.UserId);
+
+
+            // return basic user info (without password) and token to store client side
+            return Ok(new
+            {
                 Token = tokenString
             });
         }
