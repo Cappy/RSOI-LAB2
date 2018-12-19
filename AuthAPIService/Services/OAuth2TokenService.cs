@@ -13,6 +13,7 @@ namespace Auth.Services
     {
         void AddToken(string Token, Guid UserID);
         string GetTokenByUID(Guid UserID);
+        Guid GetUIDByToken(string token);
     }
 
     public class OAuth2TokenService : IOAuth2TokenService
@@ -72,6 +73,18 @@ namespace Auth.Services
             }
 
             return user.Token;
+        }
+
+        public Guid GetUIDByToken(string token)
+        {
+            var user = _context.OAuth2Tokens.SingleOrDefault(m => m.Token == token);
+
+            if (user == null)
+            {
+                return Guid.Empty;
+            }
+
+            return user.UserId;
         }
 
 

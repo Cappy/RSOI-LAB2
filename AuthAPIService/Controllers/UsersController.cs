@@ -156,6 +156,30 @@ namespace Auth.Controllers
         }
 
         [AllowAnonymous]
+        [HttpPost("get-info-by-oauth2")]
+        public IActionResult GetInfoByOAuth2Token([FromBody] OnlyToken token)
+        {
+            try
+            {
+                var userid = _OAuth2TokenService.GetUIDByToken(token.Token);
+                var User = _userService.GetById(userid);
+
+                return Ok(new
+                {
+                    UserId = User.UserId,
+                    Username = User.Username,
+                    FirstName = User.FirstName,
+                    LastName = User.LastName
+                });
+            }
+            catch
+            {
+                return BadRequest();
+            }
+
+        }
+
+        [AllowAnonymous]
         [HttpPost("register")]
         public IActionResult Register([FromBody]UserDto userDto)
         {
