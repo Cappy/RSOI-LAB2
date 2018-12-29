@@ -24,6 +24,20 @@ namespace Gateway.Controllers
         public HttpClient client = new HttpClient();
         public APIServices services = new APIServices();
 
+        public string GetTokenFromHeader(HttpRequest request)
+        {
+            var headers = request.Headers;
+            if (headers != null)
+            {
+                StringValues headerValues;
+                if (headers.TryGetValue("Authorization", out headerValues))
+                {
+                    return headerValues.FirstOrDefault().Substring(7);
+                }
+            }
+            return "";
+        }
+
         [HttpPost("authenticate")]
         public async Task<IActionResult> Authenticate([FromBody]UserDto userDto)
         {
@@ -103,19 +117,10 @@ namespace Gateway.Controllers
         public async Task<IActionResult> GetAll()
         {
 
-            var re = Request;
-            var headers = re.Headers;
-            string token = null;
-            StringValues headerValues;
-            if (headers.TryGetValue("Authorization", out headerValues))
-            {
-                token = headerValues.FirstOrDefault().Substring(7);
-            }
-
             HttpResponseMessage users;
             try
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", GetTokenFromHeader(Request));
                 users = await client.GetAsync(services.authAPI);
 
                 if (users.IsSuccessStatusCode)
@@ -140,19 +145,10 @@ namespace Gateway.Controllers
         public async Task<IActionResult> Delete(Guid id)
         {
 
-            var re = Request;
-            var headers = re.Headers;
-            string token = null;
-            StringValues headerValues;
-            if (headers.TryGetValue("Authorization", out headerValues))
-            {
-                token = headerValues.FirstOrDefault().Substring(7);
-            }
-
             HttpResponseMessage users;
             try
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", GetTokenFromHeader(Request));
                 users = await client.DeleteAsync(services.authAPI + "/" + id);
 
                 if (users.IsSuccessStatusCode)
@@ -171,5 +167,7 @@ namespace Gateway.Controllers
             }
 
         }
+
+
     }
 }

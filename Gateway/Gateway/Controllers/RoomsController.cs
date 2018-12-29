@@ -9,6 +9,7 @@ using Gateway.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Gateway.Controllers
 {

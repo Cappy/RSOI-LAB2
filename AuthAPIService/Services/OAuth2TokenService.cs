@@ -32,7 +32,7 @@ namespace Auth.Services
                 UserId = UserID,
                 Token = Token,
                 Revoked = 0,
-                IssuedAt = DateTime.Now
+                IssuedAt = DateTime.UtcNow
             };
 
             OAuth2Tokens tk1 = _context.OAuth2Tokens.SingleOrDefault(m => m.UserId == UserID);
@@ -41,7 +41,6 @@ namespace Auth.Services
             {
                 _context.OAuth2Tokens.Remove(tk1);
                 _context.OAuth2Tokens.Add(tk);
-
             }
             else
             {
@@ -67,7 +66,7 @@ namespace Auth.Services
                 return null;
             }
 
-            if (user.IssuedAt.AddMinutes(30) < DateTime.Now)
+            if (user.IssuedAt.AddMinutes(30) < DateTime.UtcNow)
             {
                 return null;
             }

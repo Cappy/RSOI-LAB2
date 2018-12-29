@@ -79,7 +79,7 @@ namespace Auth.Controllers
                 {
                     new Claim(ClaimTypes.Name, user.UserId.ToString())
                 }),
-                Expires = DateTime.Now.AddMinutes(211),  //????
+                Expires = DateTime.UtcNow.AddMinutes(30),  //????
                 Issuer = "HotelApp",
                 Audience = "HotelApp",
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
@@ -135,7 +135,7 @@ namespace Auth.Controllers
                 {
                     new Claim(ClaimTypes.Name, userModel.Token.ToString())
                 }),
-                Expires = DateTime.Now.AddMinutes(211),  //????
+                Expires = DateTime.UtcNow.AddMinutes(30),  //????
                 Issuer = "HotelApp",
                 Audience = "HotelApp",
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

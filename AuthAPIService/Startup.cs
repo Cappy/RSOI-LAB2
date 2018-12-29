@@ -104,7 +104,7 @@ namespace Auth
         {
             if (expires != null)
             {
-                return (expires > DateTime.Now);
+                return (expires > DateTime.UtcNow);
             }
             return false;
         }

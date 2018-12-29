@@ -9,6 +9,8 @@ using Gateway.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authorization;
+using Gateway.Controllers;
 
 namespace Gateway.Controllers
 {
@@ -18,10 +20,12 @@ namespace Gateway.Controllers
 
         public HttpClient client = new HttpClient();
         public APIServices services = new APIServices();
+        public AuthController AC = new AuthController();
 
         [HttpGet("bookings")]
         public async Task<IActionResult> GetBookings(int? page, int? size)
         {
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AC.GetTokenFromHeader(Request));
             string bookings;
             try
             {
@@ -45,7 +49,7 @@ namespace Gateway.Controllers
         [HttpGet("bookings/{id}")]
         public async Task<IActionResult> GetBooking(Guid id)
         {
-
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AC.GetTokenFromHeader(Request));
             string booking;
             try
             {
@@ -69,6 +73,7 @@ namespace Gateway.Controllers
         [HttpPut("bookings/{id}")]
         public async Task<IActionResult> PutBooking(Guid id, [FromBody] Booking bookingModel)
         {
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AC.GetTokenFromHeader(Request));
             HttpResponseMessage booking;
             try
             {
@@ -91,6 +96,7 @@ namespace Gateway.Controllers
         [HttpPost("bookings")]
         public async Task<IActionResult> PostBooking([FromBody] Booking bookingModel)
         {
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AC.GetTokenFromHeader(Request));
             string room = null;
             string customer = null;
 
@@ -136,6 +142,7 @@ namespace Gateway.Controllers
         [HttpDelete("bookings/{id}")]
         public async Task<IActionResult> DeleteBooking(Guid id)
         {
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AC.GetTokenFromHeader(Request));
             HttpResponseMessage booking;
             try
             {
