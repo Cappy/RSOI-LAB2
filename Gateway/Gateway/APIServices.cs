@@ -10,7 +10,7 @@ namespace Gateway
         public string customersAPI = "http://localhost:9001/api/customers";
         public string roomsAPI = "http://localhost:9003/api/rooms";
         public string bookingsAPI = "http://localhost:9005/api/bookings";
-        public string authAPI = "http://localhost:4000/api/users"; //main
+        public string authAPI = "http://localhost:8030/o"; //main
         //public string authAPI = "http://localhost:2833/api/users";  //test
 
     }

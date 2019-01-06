@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net;
 using Newtonsoft.Json;
+using Microsoft.Extensions.Primitives;
 
 namespace Gateway.Controllers
 {
@@ -19,19 +20,64 @@ namespace Gateway.Controllers
 
         public HttpClient client = new HttpClient();
         public APIServices services = new APIServices();
+        public OAuthController OA = new OAuthController();
 
-        //List<Customer> customers = new List<Customer>();
 
-        //public CustomersController() { }
-        //public CustomersController(List<Customer> customers)
-        //{
-        //    this.customers = customers;
-        //}
+        public string GetTokenFromHeader(HttpRequest request)
+        {
+            var headers = request.Headers;
+            if (headers != null)
+            {
+                StringValues headerValues;
+                if (headers.TryGetValue("Authorization", out headerValues))
+                {
+                    return headerValues.FirstOrDefault().Substring(7);
+                }
+            }
+            return "";
+        }
+
+        public async Task<bool> ValidateToken()
+        {
+            var token = GetTokenFromHeader(Request);
+            HttpResponseMessage introspect;
+            try
+            {
+                var stringContent = new StringContent(string.Empty);
+                string url = string.Format("http://localhost:4313/api/o/introspect/?token={0}", token);
+                introspect = await client.GetAsync(url);
+            }
+            catch
+            {
+                return false;
+            }
+
+            var Introspect = await introspect.Content.ReadAsAsync<OAuthController.IntrospectResponse>();
+            if (Introspect == null)
+            {
+                return false;
+            }
+            else if (Introspect.active == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
 
 
         [HttpGet("customers")]
         public async Task<IActionResult> GetCustomers(int? page, int? size)
         {
+            bool checktoken = await ValidateToken();
+            if(!checktoken)
+            {
+                return Unauthorized();
+            }
+
             string customers = null;
 
             try
@@ -56,6 +102,12 @@ namespace Gateway.Controllers
         [HttpGet("customers/{id}")]
         public async Task<IActionResult> GetCustomer(Guid id)
         {
+            bool checktoken = await ValidateToken();
+            if (!checktoken)
+            {
+                return Unauthorized();
+            }
+
             string customer = null;
 
             try
@@ -80,6 +132,12 @@ namespace Gateway.Controllers
         [HttpPut("customers/{id}")]
         public async Task<IActionResult> PutCustomer(Guid id, [FromBody] Customer customerModel)
         {
+            bool checktoken = await ValidateToken();
+            if (!checktoken)
+            {
+                return Unauthorized();
+            }
+
             HttpResponseMessage customer;
 
             try
@@ -102,6 +160,12 @@ namespace Gateway.Controllers
         [HttpPost("customers")]
         public async Task<IActionResult> PostCustomer([FromBody] Customer customerModel)
         {
+            bool checktoken = await ValidateToken();
+            if (!checktoken)
+            {
+                return Unauthorized();
+            }
+
             HttpResponseMessage customer;
 
             Guid id = Guid.NewGuid();
@@ -130,6 +194,12 @@ namespace Gateway.Controllers
         [HttpDelete("customers/{id}")]
         public async Task<IActionResult> DeleteCustomer(Guid id)
         {
+            bool checktoken = await ValidateToken();
+            if (!checktoken)
+            {
+                return Unauthorized();
+            }
+
             HttpResponseMessage customer;
 
             try

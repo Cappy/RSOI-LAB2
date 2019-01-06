@@ -1,0 +1,746 @@
+Not Found: /
+"GET / HTTP/1.1" 404 2155
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2206
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+"GET /static/admin/css/login.css HTTP/1.1" 200 1203
+"GET /static/admin/css/base.css HTTP/1.1" 200 16225
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 17976
+"GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: auth_user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\contrib\admin\sites.py", line 398, in login
+    return LoginView.as_view(**defaults)(request)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\contrib\auth\views.py", line 61, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\edit.py", line 141, in post
+    if form.is_valid():
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\forms\forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\forms\forms.py", line 180, in errors
+    self.full_clean()
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\forms\forms.py", line 382, in full_clean
+    self._clean_form()
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\forms\forms.py", line 409, in _clean_form
+    cleaned_data = self.clean()
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\contrib\auth\forms.py", line 196, in clean
+    self.user_cache = authenticate(self.request, username=username, password=password)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\contrib\auth\__init__.py", line 73, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\contrib\auth\backends.py", line 16, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\contrib\auth\base_user.py", line 44, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 393, in get
+    num = len(clone)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 250, in __len__
+    self._fetch_all()
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\models\sql\compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Pavel\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: auth_user
+"POST /admin/login/?next=/admin/ HTTP/1.1" 500 225588
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 5245
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+"GET /admin/oauth2_provider/application/add/ HTTP/1.1" 200 9370
+"GET /static/admin/css/forms.css HTTP/1.1" 200 8505
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271751
+"GET /static/admin/js/core.js HTTP/1.1" 200 7135
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 8972
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+"GET /static/admin/js/actions.js HTTP/1.1" 200 6538
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /admin/auth/user/?_to_field=id&_popup=1 HTTP/1.1" 200 5556
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"POST /admin/oauth2_provider/application/add/ HTTP/1.1" 302 0
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 6597
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /admin/oauth2_provider/application/1/change/ HTTP/1.1" 200 9805
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 200 280
+Not Found: /api/v1/o/token/
+"POST /api/v1/o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos88zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 404 2576
+Not Found: /api/o/token/
+"POST /api/o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos88zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 404 2514
+Unauthorized: /o/token/
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos88zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 401 27
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 6396
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+"GET /admin/oauth2_provider/application/add/ HTTP/1.1" 200 9370
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"POST /admin/oauth2_provider/application/add/ HTTP/1.1" 302 0
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 6983
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /admin/oauth2_provider/application/2/change/ HTTP/1.1" 200 9811
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /o/authorize?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 301 0
+"GET /o/authorize?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 301 0
+"GET /o/authorize/?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 200 3147
+"POST /o/authorize/?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 302 0
+Unauthorized: /o/token/
+"POST /o/token/?code=y3wbo5YwtuMwGYyNkE1MB6RauV83m1&state=keks&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&client_secret=lFdK0LM5UHADtfufmJrzSlzjGHCFeUbxNZCASPX1XtuhtWeM9mxDmUcZUd43iEV7HWjj2v6sU6muaNLO6OIoiwmiBUzBseYVNGnrE21AmsZEaNpxirCqusRmovv3NLs7&grant_type=authorization_code&redirect_uri=http://127.0.0.1:8030/external_app/ HTTP/1.1" 401 43
+"POST /admin/oauth2_provider/application/2/change/ HTTP/1.1" 302 0
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 6985
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+Unauthorized: /o/token/
+"POST /o/token/?code=y3wbo5YwtuMwGYyNkE1MB6RauV83m1&state=keks&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&client_secret=lFdK0LM5UHADtfufmJrzSlzjGHCFeUbxNZCASPX1XtuhtWeM9mxDmUcZUd43iEV7HWjj2v6sU6muaNLO6OIoiwmiBUzBseYVNGnrE21AmsZEaNpxirCqusRmovv3NLs7&grant_type=authorization_code&redirect_uri=http://localhost:2000/external_app/ HTTP/1.1" 401 43
+"GET /admin/oauth2_provider/application/2/change/ HTTP/1.1" 200 9824
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 304 0
+"POST /admin/oauth2_provider/application/2/change/ HTTP/1.1" 302 0
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 6985
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+Unauthorized: /o/token/
+"POST /o/token/?code=y3wbo5YwtuMwGYyNkE1MB6RauV83m1&state=keks&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&client_secret=lFdK0LM5UHADtfufmJrzSlzjGHCFeUbxNZCASPX1XtuhtWeM9mxDmUcZUd43iEV7HWjj2v6sU6muaNLO6OIoiwmiBUzBseYVNGnrE21AmsZEaNpxirCqusRmovv3NLs7&grant_type=authorization_code&redirect_uri=http://localhost:2000/external_app/ HTTP/1.1" 401 43
+"GET /o/authorize?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 301 0
+"GET /o/authorize/?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 302 0
+"GET /admin/oauth2_provider/application/2/change/ HTTP/1.1" 200 9832
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+"POST /o/token/?code=7XjDvdTruH7aNHDNA6tuoRVe08VB4h&state=keks&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&client_secret=lFdK0LM5UHADtfufmJrzSlzjGHCFeUbxNZCASPX1XtuhtWeM9mxDmUcZUd43iEV7HWjj2v6sU6muaNLO6OIoiwmiBUzBseYVNGnrE21AmsZEaNpxirCqusRmovv3NLs7&grant_type=authorization_code&redirect_uri=http://localhost:2000/external_app/ HTTP/1.1" 200 199
+Forbidden: /o/introspect/
+"GET /o/introspect/?token=xYztTcxUQ9eTe4roSUCYzIs5nBYVUI&access_token=mIEAbGY1M10bf1WkSu2BNQiNhC9GXl HTTP/1.1" 403 0
+"GET /o/introspect/?token=xYztTcxUQ9eTe4roSUCYzIs5nBYVUI&access_token=xYztTcxUQ9eTe4roSUCYzIs5nBYVUI HTTP/1.1" 200 150
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 6779
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /admin/oauth2_provider/application/add/ HTTP/1.1" 200 9370
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"POST /admin/oauth2_provider/application/add/ HTTP/1.1" 302 0
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 7357
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /admin/oauth2_provider/application/3/change/ HTTP/1.1" 200 9811
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /o/authorize?response_type=code&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&state=random_state_string HTTP/1.1" 301 0
+"GET /o/authorize?response_type=code&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&state=random_state_string HTTP/1.1" 301 0
+"GET /o/authorize/?response_type=code&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&state=random_state_string HTTP/1.1" 302 0
+Unauthorized: /o/token/
+"POST /o/token/?code=U08S7RxbH4R6I9sNAvh0NSUY2dgPiz&state=keks&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&client_secret=yyq0TJsCHqcSw9ZInXsvA6kS6vH6Cp6caCSyVpFmASE7wk0IdD4denvoVVLarm1JbeZYHbQp1WFyddYLISqRuc8ngp4gfbBJkGmTpzkgRPjI9viO7Zr0mwMQHGzirIeu&grant_type=authorization_code&redirect_uri=http://localhost:2500/ HTTP/1.1" 401 43
+"POST /admin/oauth2_provider/application/3/change/ HTTP/1.1" 302 0
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 7359
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+Unauthorized: /o/token/
+"POST /o/token/?code=U08S7RxbH4R6I9sNAvh0NSUY2dgPiz&state=keks&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&client_secret=yyq0TJsCHqcSw9ZInXsvA6kS6vH6Cp6caCSyVpFmASE7wk0IdD4denvoVVLarm1JbeZYHbQp1WFyddYLISqRuc8ngp4gfbBJkGmTpzkgRPjI9viO7Zr0mwMQHGzirIeu&grant_type=authorization_code&redirect_uri=http://localhost:2500/ HTTP/1.1" 401 43
+"GET /o/authorize/?response_type=code&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&state=random_state_string HTTP/1.1" 302 0
+Unauthorized: /o/token/
+"POST /o/token/?code=7eojJBdYAzVSu1A5yKdSsdL2yLlf6o&state=keks&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&client_secret=yyq0TJsCHqcSw9ZInXsvA6kS6vH6Cp6caCSyVpFmASE7wk0IdD4denvoVVLarm1JbeZYHbQp1WFyddYLISqRuc8ngp4gfbBJkGmTpzkgRPjI9viO7Zr0mwMQHGzirIeu&grant_type=authorization_code&redirect_uri=http://localhost:2500/ HTTP/1.1" 401 43
+"GET /o/authorize/?response_type=code&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&state=random_state_string HTTP/1.1" 302 0
+"GET /o/authorize?response_type=code&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&state=random_state_string HTTP/1.1" 301 0
+"GET /o/authorize/?response_type=code&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&state=random_state_string HTTP/1.1" 302 0
+"GET /admin/oauth2_provider/application/3/change/ HTTP/1.1" 200 9811
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+Unauthorized: /o/token/
+"POST /o/token/?code=7eojJBdYAzVSu1A5yKdSsdL2yLlf6o&state=keks&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&client_secret=yyq0TJsCHqcSw9ZInXsvA6kS6vH6Cp6caCSyVpFmASE7wk0IdD4denvoVVLarm1JbeZYHbQp1WFyddYLISqRuc8ngp4gfbBJkGmTpzkgRPjI9viO7Zr0mwMQHGzirIeu&grant_type=authorization_code&redirect_uri=http://localhost:2500/ HTTP/1.1" 401 43
+"GET /o/authorize?response_type=code&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&state=random_state_string HTTP/1.1" 301 0
+"GET /o/authorize/?response_type=code&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&state=random_state_string HTTP/1.1" 302 0
+"POST /o/token/?code=0oLtTAB6Exfc3nYJZlWtPwtvmKdrcs&state=keks&client_id=VCMCTZM7p2fZ6h4QygNbKLUCsAg2ZM5NPSMRLRer&client_secret=yyq0TJsCHqcSw9ZInXsvA6kS6vH6Cp6caCSyVpFmASE7wk0IdD4denvoVVLarm1JbeZYHbQp1WFyddYLISqRuc8ngp4gfbBJkGmTpzkgRPjI9viO7Zr0mwMQHGzirIeu&grant_type=authorization_code&redirect_uri=http://localhost:2500/ HTTP/1.1" 200 199
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 7157
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+"GET /admin/oauth2_provider/ HTTP/1.1" 200 4017
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /admin/oauth2_provider/accesstoken/ HTTP/1.1" 200 5900
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /admin/oauth2_provider/accesstoken/3/change/ HTTP/1.1" 200 9249
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20281
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+"POST /admin/oauth2_provider/accesstoken/3/change/ HTTP/1.1" 302 0
+"GET /admin/oauth2_provider/accesstoken/ HTTP/1.1" 200 6126
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+"GET /admin/oauth2_provider/accesstoken/2/change/ HTTP/1.1" 200 9249
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /admin/oauth2_provider/accesstoken/ HTTP/1.1" 200 5900
+"GET /admin/oauth2_provider/accesstoken/3/change/ HTTP/1.1" 200 9249
+"GET /admin/oauth2_provider/ HTTP/1.1" 200 4017
+"GET /admin/oauth2_provider/refreshtoken/ HTTP/1.1" 200 5578
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /admin/oauth2_provider/ HTTP/1.1" 200 4017
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 7157
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /admin/oauth2_provider/application/2/change/ HTTP/1.1" 200 9832
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 304 0
+"POST /o/token/?refresh_token=rpb8A32uniDFz1zZnqag0CXMujaHNX&state=keks&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&client_secret=lFdK0LM5UHADtfufmJrzSlzjGHCFeUbxNZCASPX1XtuhtWeM9mxDmUcZUd43iEV7HWjj2v6sU6muaNLO6OIoiwmiBUzBseYVNGnrE21AmsZEaNpxirCqusRmovv3NLs7&grant_type=refresh_token&redirect_uri=http://127.0.0.1/external_app/ HTTP/1.1" 200 199
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 7157
+"GET /admin/oauth2_provider/ HTTP/1.1" 200 4017
+"GET /admin/oauth2_provider/accesstoken/ HTTP/1.1" 200 5900
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"POST /o/token/?refresh_token=ZcrT48FQzLDpEN6dqNNsNtoGZiV3Nd&state=keks&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&client_secret=lFdK0LM5UHADtfufmJrzSlzjGHCFeUbxNZCASPX1XtuhtWeM9mxDmUcZUd43iEV7HWjj2v6sU6muaNLO6OIoiwmiBUzBseYVNGnrE21AmsZEaNpxirCqusRmovv3NLs7&grant_type=refresh_token&redirect_uri=http://127.0.0.1/external_app/ HTTP/1.1" 200 199
+"GET /admin/oauth2_provider/accesstoken/ HTTP/1.1" 200 5900
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+Forbidden: /o/introspect/
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDnei HTTP/1.1" 403 0
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=abc&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 401 17
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+"GET /admin/oauth2_provider/ HTTP/1.1" 200 4017
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 7157
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+Not Found: /
+"GET / HTTP/1.1" 404 2155
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2206
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+"GET /static/admin/css/login.css HTTP/1.1" 200 1203
+"GET /static/admin/css/base.css HTTP/1.1" 200 16225
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 17976
+"GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 7455
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+"GET /admin/oauth2_provider/accesstoken/ HTTP/1.1" 200 5900
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+"GET /static/admin/js/actions.js HTTP/1.1" 200 6538
+"GET /static/admin/js/core.js HTTP/1.1" 200 7135
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271751
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 8972
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"GET /admin/oauth2_provider/accesstoken/3/change/ HTTP/1.1" 200 9371
+"GET /static/admin/css/forms.css HTTP/1.1" 200 8505
+"GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20281
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+"GET /admin/oauth2_provider/accesstoken/ HTTP/1.1" 200 5900
+"GET /admin/ HTTP/1.1" 200 7455
+"GET /admin/auth/user/ HTTP/1.1" 200 6612
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+"GET /admin/ HTTP/1.1" 200 7455
+"GET /admin/auth/group/ HTTP/1.1" 200 3503
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /admin/ HTTP/1.1" 200 7455
+"GET /admin/auth/user/ HTTP/1.1" 200 6612
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /admin/ HTTP/1.1" 200 7455
+"GET /admin/oauth2_provider/accesstoken/ HTTP/1.1" 200 5900
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+Not Found: /api/v1/o/introspect/
+"GET /api/v1/o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 404 2371
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+"GET /admin/oauth2_provider/accesstoken/3/change/ HTTP/1.1" 200 9371
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /admin/oauth2_provider/accesstoken/ HTTP/1.1" 200 5900
+"GET /admin/ HTTP/1.1" 200 7455
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 7157
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /admin/oauth2_provider/application/3/change/ HTTP/1.1" 200 9811
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 200 280
+"GET /admin/oauth2_provider/application/ HTTP/1.1" 200 7157
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+Not Found: /o
+"GET /o HTTP/1.1" 404 2176
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+Not Found: /o
+"GET /o HTTP/1.1" 404 2176
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDn&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 401 17
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDn&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 401 17
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDn&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 401 17
+Forbidden: /o/introspect/
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne&access_token=u6EGsWiNgMVEGEgKgGwUemG0q6JDn HTTP/1.1" 403 0
+Forbidden: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 403 0
+Forbidden: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 403 0
+Forbidden: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 403 0
+Forbidden: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 403 0
+Unauthorized: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 401 17
+Forbidden: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 403 0
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDn HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"POST /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 401 17
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDn HTTP/1.1" 401 17
+"GET /o/introspect/?token=u6EGsWiNgMVEGEgKgGwUemG0q6JDne HTTP/1.1" 200 150
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=u58VnAuZqyRj5Dn033RRxxZUjn6cd2 HTTP/1.1" 200 150
+"GET /o/introspect/?token=u58VnAuZqyRj5Dn033RRxxZUjn6cd2 HTTP/1.1" 200 150
+"GET /o/introspect/?token=u58VnAuZqyRj5Dn033RRxxZUjn6cd2 HTTP/1.1" 200 150
+"GET /o/introspect/?token=u58VnAuZqyRj5Dn033RRxxZUjn6cd2 HTTP/1.1" 200 150
+"GET /o/introspect/?token=u58VnAuZqyRj5Dn033RRxxZUjn6cd2 HTTP/1.1" 200 17
+"GET /o/introspect/?token=u58VnAuZqyRj5Dn033RRxxZUjn6cd2 HTTP/1.1" 200 17
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=ls3K6OYBhVlFJX07eQtqR5aKekvFKr HTTP/1.1" 200 150
+"GET /o/introspect/?token=ls3K6OYBhVlFJX07eQtqR5aKekvFKr HTTP/1.1" 200 150
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=9IGICkLzy7WGCO913yU4PqnkUhIfMB HTTP/1.1" 200 150
+"GET /o/introspect/?token=9IGICkLzy7WGCO913yU4PqnkUhIfMB HTTP/1.1" 200 150
+"GET /o/introspect/?token=9IGICkLzy7WGCO913yU4PqnkUhIfMB HTTP/1.1" 200 150
+"GET /o/introspect/?token=9IGICkLzy7WGCO913yU4PqnkUhIfMB HTTP/1.1" 200 150
+"GET /o/introspect/?token=9IGICkLzy7WGCO913yU4PqnkUhIfMB HTTP/1.1" 200 150
+"GET /o/introspect/?token=9IGICkLzy7WGCO913yU4PqnkUhIfMB HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+Unauthorized: /o/introspect/
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=rAMlQShmgonJiHvz4zf0I8iEYdMAGw HTTP/1.1" 200 150
+"GET /o/introspect/?token=rAMlQShmgonJiHvz4zf0I8iEYdMAGw HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=BXkIiPB4AE7ozjl5tZqtihgD17MUSA HTTP/1.1" 200 150
+"GET /o/introspect/?token=BXkIiPB4AE7ozjl5tZqtihgD17MUSA HTTP/1.1" 200 150
+"GET /o/introspect/?token=BXkIiPB4AE7ozjl5tZqtihgD17MUSA HTTP/1.1" 200 150
+"GET /o/introspect/?token=BXkIiPB4AE7ozjl5tZqtihgD17MUSA HTTP/1.1" 200 150
+"GET /o/introspect/?token=BXkIiPB4AE7ozjl5tZqtihgD17MUSA HTTP/1.1" 200 150
+"GET /o/introspect/?token=BXkIiPB4AE7ozjl5tZqtihgD17MUSA HTTP/1.1" 200 150
+"GET /o/introspect/?token=BXkIiPB4AE7ozjl5tZqtihgD17MUSA HTTP/1.1" 200 150
+"GET /o/introspect/?token=BXkIiPB4AE7ozjl5tZqtihgD17MUSA HTTP/1.1" 200 150
+"GET /o/introspect/?token=BXkIiPB4AE7ozjl5tZqtihgD17MUSA HTTP/1.1" 200 150
+"GET /o/introspect/?token=BXkIiPB4AE7ozjl5tZqtihgD17MUSA HTTP/1.1" 200 150
+"GET /o/introspect/?token=BXkIiPB4AE7ozjl5tZqtihgD17MUSA HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token= HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=5O2E4Wdipc2jpqpzIIyBxuYhZDcVTR HTTP/1.1" 200 150
+"GET /o/introspect/?token=5O2E4Wdipc2jpqpzIIyBxuYhZDcVTR HTTP/1.1" 200 150
+"GET /o/introspect/?token=5O2E4Wdipc2jpqpzIIyBxuYhZDcVTR HTTP/1.1" 200 150
+"GET /o/introspect/?token=5O2E4Wdipc2jpqpzIIyBxuYhZDcVTR HTTP/1.1" 200 150
+"GET /o/introspect/?token=5O2E4Wdipc2jpqpzIIyBxuYhZDcVTR HTTP/1.1" 200 150
+"GET /o/introspect/?token=5O2E4Wdipc2jpqpzIIyBxuYhZDcVTR HTTP/1.1" 200 150
+"GET /o/introspect/?token=5O2E4Wdipc2jpqpzIIyBxuYhZDcVTR HTTP/1.1" 200 150
+"GET /o/introspect/?token=5O2E4Wdipc2jpqpzIIyBxuYhZDcVTR HTTP/1.1" 200 150
+"GET /o/introspect/?token=5O2E4Wdipc2jpqpzIIyBxuYhZDcVTR HTTP/1.1" 200 150
+"GET /o/introspect/?token=5O2E4Wdipc2jpqpzIIyBxuYhZDcVTR HTTP/1.1" 200 150
+"GET /o/introspect/?token=5O2E4Wdipc2jpqpzIIyBxuYhZDcVTR HTTP/1.1" 200 150
+"GET /o/introspect/?token=5O2E4Wdipc2jpqpzIIyBxuYhZDcVTR HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+"GET /o/introspect/?token=Me1t40fbbqdF50RTvp5a11yanKeDRA HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=dmmkqcAktAJxaH0OjF8OcNqFOubyel HTTP/1.1" 200 150
+"GET /o/introspect/?token=dmmkqcAktAJxaH0OjF8OcNqFOubyel HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=eotlmFEytDLSAUUhWoblxnGvuzpx9a HTTP/1.1" 200 150
+"GET /o/introspect/?token=eotlmFEytDLSAUUhWoblxnGvuzpx9a HTTP/1.1" 200 150
+"GET /o/introspect/?token=eotlmFEytDLSAUUhWoblxnGvuzpx9a HTTP/1.1" 200 150
+"GET /o/introspect/?token=eotlmFEytDLSAUUhWoblxnGvuzpx9a HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=EaTtX2iizDBexPpUFwvBwRm6rcPBui HTTP/1.1" 200 150
+"GET /o/introspect/?token=EaTtX2iizDBexPpUFwvBwRm6rcPBui HTTP/1.1" 200 150
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+Unauthorized: /o/introspect/
+"GET /o/introspect/?token=123456abcde HTTP/1.1" 401 17
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=vBMpfl02c7ODWLuR9KTM0gCIU5ZvrI HTTP/1.1" 200 150
+"GET /o/introspect/?token=vBMpfl02c7ODWLuR9KTM0gCIU5ZvrI HTTP/1.1" 200 150
+"GET /o/introspect/?token=vBMpfl02c7ODWLuR9KTM0gCIU5ZvrI HTTP/1.1" 200 150
+"GET /o/introspect/?token=vBMpfl02c7ODWLuR9KTM0gCIU5ZvrI HTTP/1.1" 200 150
+"GET /o/introspect/?token=vBMpfl02c7ODWLuR9KTM0gCIU5ZvrI HTTP/1.1" 200 150
+"GET /o/introspect/?token=vBMpfl02c7ODWLuR9KTM0gCIU5ZvrI HTTP/1.1" 200 150
+"GET /o/introspect/?token=vBMpfl02c7ODWLuR9KTM0gCIU5ZvrI HTTP/1.1" 200 150
+Not Found: /
+"GET / HTTP/1.1" 404 2155
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2206
+"GET /admin/ HTTP/1.1" 200 7455
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+"GET /admin/oauth2_provider/accesstoken/ HTTP/1.1" 200 19767
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /admin/oauth2_provider/accesstoken/37/change/ HTTP/1.1" 200 11477
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+"GET /admin/oauth2_provider/accesstoken/ HTTP/1.1" 200 19767
+"GET /admin/ HTTP/1.1" 200 7455
