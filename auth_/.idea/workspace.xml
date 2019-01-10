@@ -2,47 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a340cc79-339e-42a9-b066-8260442440dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/bin/Debug/netcoreapp2.0/BookingAPIServices.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/bin/Debug/netcoreapp2.0/BookingAPIServices.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/obj/BookingAPIServices.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/obj/BookingAPIServices.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/obj/BookingAPIServices.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/obj/BookingAPIServices.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/obj/Debug/netcoreapp2.0/BookingAPIServices.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/obj/Debug/netcoreapp2.0/BookingAPIServices.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/obj/Debug/netcoreapp2.0/BookingAPIServices.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/obj/Debug/netcoreapp2.0/BookingAPIServices.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/obj/Debug/netcoreapp2.0/BookingAPIServices.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/obj/Debug/netcoreapp2.0/BookingAPIServices.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingAPIServices/BookingAPIServices/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/bin/Debug/netcoreapp2.0/CustomersAPIServices.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/bin/Debug/netcoreapp2.0/CustomersAPIServices.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/CustomersAPIServices.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/CustomersAPIServices.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/CustomersAPIServices.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/CustomersAPIServices.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/Debug/netcoreapp2.0/CustomersAPIServices.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/Debug/netcoreapp2.0/CustomersAPIServices.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/Debug/netcoreapp2.0/CustomersAPIServices.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/Debug/netcoreapp2.0/CustomersAPIServices.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/Debug/netcoreapp2.0/CustomersAPIServices.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/Debug/netcoreapp2.0/CustomersAPIServices.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/Debug/netcoreapp2.0/CustomersAPIServices.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/Debug/netcoreapp2.0/CustomersAPIServices.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomersAPIServices/CustomersAPIServices/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gateway/.vs/Gateway/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/.vs/Gateway/v15/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gateway/.vs/Gateway/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/.vs/Gateway/v15/Server/sqlite3/storage.ide" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/APIServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/APIServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/Controllers/CustomersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/Controllers/CustomersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/bin/Debug/netcoreapp2.1/Gateway.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/bin/Debug/netcoreapp2.1/Gateway.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gateway/.vs/Gateway/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/.vs/Gateway/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gateway/.vs/Gateway/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/.vs/Gateway/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/Controllers/AggregationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/Controllers/AggregationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/bin/Debug/netcoreapp2.1/Gateway.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/bin/Debug/netcoreapp2.1/Gateway.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/bin/Debug/netcoreapp2.1/Gateway.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/bin/Debug/netcoreapp2.1/Gateway.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/obj/Debug/netcoreapp2.1/Gateway.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/obj/Debug/netcoreapp2.1/Gateway.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/obj/Debug/netcoreapp2.1/Gateway.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/obj/Debug/netcoreapp2.1/Gateway.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/obj/Debug/netcoreapp2.1/Gateway.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/obj/Debug/netcoreapp2.1/Gateway.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/obj/Debug/netcoreapp2.1/Gateway.csprojAssemblyReference.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/obj/Debug/netcoreapp2.1/Gateway.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/obj/Debug/netcoreapp2.1/Gateway.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/obj/Debug/netcoreapp2.1/Gateway.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/obj/Debug/netcoreapp2.1/Gateway.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/obj/Gateway.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/obj/Gateway.csproj.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/obj/Gateway.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/obj/Gateway.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gateway/Gateway/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/Gateway/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gateway/GatewayTests/obj/Debug/netcoreapp2.1/GatewayTests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/GatewayTests/obj/Debug/netcoreapp2.1/GatewayTests.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gateway/GatewayTests/obj/Debug/netcoreapp2.1/GatewayTests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/GatewayTests/obj/Debug/netcoreapp2.1/GatewayTests.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Gateway/GatewayTests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/GatewayTests/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/bin/Debug/netcoreapp2.0/RoomsAPIServices.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/bin/Debug/netcoreapp2.0/RoomsAPIServices.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/obj/Debug/netcoreapp2.0/RoomsAPIServices.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/obj/Debug/netcoreapp2.0/RoomsAPIServices.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/obj/Debug/netcoreapp2.0/RoomsAPIServices.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/obj/Debug/netcoreapp2.0/RoomsAPIServices.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/obj/Debug/netcoreapp2.0/RoomsAPIServices.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/obj/Debug/netcoreapp2.0/RoomsAPIServices.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/obj/RoomsAPIServices.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/obj/RoomsAPIServices.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/obj/RoomsAPIServices.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/obj/RoomsAPIServices.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomsAPIServices/RoomsAPIServices/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gateway.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/gateway.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +59,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -108,6 +80,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -190,16 +163,18 @@
       <updated>1546794417492</updated>
       <workItem from="1546794418640" duration="1335000" />
       <workItem from="1546795946064" duration="502000" />
+      <workItem from="1547061861657" duration="622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1837000" />
+    <option name="totallyTimeSpent" value="2459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18017058" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18176973" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />

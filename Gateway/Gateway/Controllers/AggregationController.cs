@@ -67,26 +67,55 @@ namespace Gateway.Controllers
             // var bk = JsonConvert.DeserializeObject<List<Booking>>(booking);
              Booking bk = JsonConvert.DeserializeObject<Booking>(booking);
 
-            string customer;
-            string room;
+            string customer = "";
+            string room = "";
+
+            Customer csNull = new Customer();
+            Room rmNull = new Room();
 
             try
             {
                 customer = await client.GetStringAsync(services.customersAPI + $"/{bk.CustomerId}");
+            }
+            catch
+            {
+                csNull = new Customer()
+                {
+                    CustomerId = Guid.Empty,
+                    Name = "[service unavailable]",
+                    Surname = "",
+                    PhoneNumber = "[service unavailable]"
+                };
+            }
+
+            try
+            {
                 room = await client.GetStringAsync(services.roomsAPI + $"/{bk.RoomId}");
             }
             catch
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable);
+
+                rmNull = new Room()
+                {
+                    RoomId = Guid.Empty,
+                    Number = -1,
+                    Cost = -0.0
+                };
             }
 
-            if (customer == null || room == null)
-            {
-                return NotFound();
-            }
 
             Customer cs = JsonConvert.DeserializeObject<Customer>(customer);
             Room rm = JsonConvert.DeserializeObject<Room>(room);
+
+            if (customer == string.Empty)
+            {
+                cs = csNull;
+            }
+
+            if (room == string.Empty)
+            {
+                rm = rmNull;
+            }
 
             var result = new BookingWithInfo
             {
@@ -105,8 +134,6 @@ namespace Gateway.Controllers
                     Cost = rm.Cost
                 }
             };
-
-            //var json = JsonConvert.SerializeObject(result);
 
             return Ok(result);
         }
@@ -132,26 +159,60 @@ namespace Gateway.Controllers
             // var bk = JsonConvert.DeserializeObject<List<Booking>>(booking);
             var Bookings = JsonConvert.DeserializeObject<List<Booking>>(bookings);
 
-            string customer;
-            string room;
+            string customer = "";
+            string room = "";
 
             var result = new List<BookingWithInfo>();
+
+
+            Customer csNull = new Customer();
+            Room rmNull = new Room();
 
             foreach (Booking bk in Bookings)
             {
                 try
                 {
                     customer = await client.GetStringAsync(services.customersAPI + $"/{bk.CustomerId}");
+                }
+                catch
+                {
+                    csNull = new Customer()
+                    {
+                        CustomerId = Guid.Empty,
+                        Name = "[service unavailable]",
+                        Surname = "",
+                        PhoneNumber = "[service unavailable]"
+                    };
+                }
+
+                try
+                {
                     room = await client.GetStringAsync(services.roomsAPI + $"/{bk.RoomId}");
                 }
                 catch
                 {
-                    return StatusCode(StatusCodes.Status503ServiceUnavailable);
+
+                    rmNull = new Room()
+                    {
+                        RoomId = Guid.Empty,
+                        Number = -1,
+                        Cost = -0.0
+                    };
                 }
 
+                
                 Customer cs = JsonConvert.DeserializeObject<Customer>(customer);
                 Room rm = JsonConvert.DeserializeObject<Room>(room);
 
+                if (customer == string.Empty)
+                {
+                    cs = csNull;
+                }
+
+                if (room == string.Empty)
+                {
+                    rm = rmNull;
+                }
 
                 var entry = new BookingWithInfo
                 {
@@ -172,7 +233,7 @@ namespace Gateway.Controllers
                 };
 
                 result.Add(entry);
-          
+                    
             }
 
             return Ok(result);

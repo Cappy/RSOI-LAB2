@@ -744,3 +744,5 @@ Not Found: /favicon.ico
 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
 "GET /admin/oauth2_provider/accesstoken/ HTTP/1.1" 200 19767
 "GET /admin/ HTTP/1.1" 200 7455
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=9U6E3REuLK5RCDnvKZY2x33HZ1KhKZ HTTP/1.1" 200 150
