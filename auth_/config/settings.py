@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'UoooKz59KC5KO5ZHW+[U9XLa-cpu__9tD:d;f8EXOyj2csTp(f>5S}_DI43&.z'
+SECRET_KEY = 'k@)#^s3*nig9+(4oxzykhcfxx3(lw8t)@hu%+-5)s@0zx^(5@o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -159,7 +159,7 @@ LOGGING = {
         'file': {
             'level':    'DEBUG',
             'class':    'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'logs/gateway.log'),
+            'filename': os.path.join(BASE_DIR, 'logs/auth.log'),
         },
     },
     'loggers':                  {

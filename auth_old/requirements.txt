@@ -1,0 +1,9 @@
+Django==2.1.2
+djangorestframework==3.9.0
+gunicorn
+vcrpy
+requests
+setuptools
+coverage
+django-cors-headers
+django-oauth-toolkit
