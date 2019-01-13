@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Moq;
 using System.Collections.Generic;
+using System.Web.Http.Results;
 
 namespace GatewayTests
 {
@@ -17,7 +18,7 @@ namespace GatewayTests
         {
             var controller = new CustomersController();
 
-            var result = controller.GetCustomers(1,1).Result;
+            var result = controller.GetCustomers(null,null);
 
 
             Assert.IsNotNull(result);
@@ -29,7 +30,7 @@ namespace GatewayTests
         {
             var controller = new CustomersController();
 
-            var result = controller.GetCustomer(new Guid("095de47e-f427-4ad8-b5be-1038fa2b0f82"));//.Result as OkObjectResult;
+            var result = controller.GetCustomer(new Guid("095de47e-f427-4ad8-b5be-1038fa2b0f82"));
 
             Assert.IsNotNull(result);
             //Assert.AreEqual(result.StatusCode, StatusCodes.Status200OK);
@@ -54,8 +55,16 @@ namespace GatewayTests
         public void GetCustomerTestMethod_ShouldReturn404NotFound()
         {
             var controller = new CustomersController();
+            OkObjectResult result = null;
 
-            var result = controller.GetCustomer(new Guid("d8374299-a7f4-4293-8364-4f65b0f7947a")).Result as OkObjectResult;
+            try
+            {
+                result = controller.GetCustomer(new Guid("d8374299-a7f4-4293-8364-4f65b0f7947a")).Result as OkObjectResult;
+            }
+            catch
+            {
+
+            }
 
             Assert.IsNull(result);
 
@@ -67,9 +76,18 @@ namespace GatewayTests
 
             var controller = new CustomersController();
 
-            var result = controller.PostCustomer(Mock.Of<Customer>()).Result as OkObjectResult;
+            OkObjectResult result = null;
 
-            Assert.IsFalse(result is OkObjectResult);
+            try
+            {
+                result = controller.PostCustomer(Mock.Of<Customer>()).Result as OkObjectResult;
+            }
+            catch
+            {
+
+            }
+
+            Assert.IsNull(result);
 
         }
 
@@ -105,19 +123,27 @@ namespace GatewayTests
         {
             var controller = new BookingsController();
 
-            var result = controller.GetBooking(new Guid("07b073f2-754f-4f85-9425-ae758d267e2b"));//.Result as OkObjectResult;
+            var result = controller.GetBooking(new Guid("07b073f2-754f-4f85-9425-ae758d267e2b"));
 
             Assert.IsNotNull(result);
-            //Assert.AreEqual(result.StatusCode, StatusCodes.Status200OK);
 
         }
 
         [TestMethod]
         public void GetBookingTestMethod_ShouldReturn404NotFound()
         {
+            OkObjectResult result = null;
+
             var controller = new BookingsController();
 
-            var result = controller.GetBooking(new Guid("095de47e-f427-4ad8-b5be-1038fa2b0f82")).Result as OkObjectResult;
+            try
+            {
+                result = controller.GetBooking(new Guid("095de47e-f427-4ad8-b5be-1038fa2b0f82")).Result as OkObjectResult;
+            }
+            catch
+            {
+
+            }
 
             Assert.IsNull(result);
 
@@ -129,11 +155,25 @@ namespace GatewayTests
 
             var controller = new BookingsController();
 
-            var result = controller.PostBooking(Mock.Of<Booking>()).Result as Microsoft.AspNetCore.Mvc.StatusCodeResult;
+            Booking bk = new Booking
+            {
+                BookingId = new Guid("07b073f2-754f-4f85-9425-ae758d267e2b"),
+                CustomerId = new Guid("f05d8278-e37e-4c99-aae3-35a84f63cf02"),
+                RoomId = new Guid("07b073f2-754f-4f85-9425-ae758d267e2b")
+            };
 
-            int StatusCode = result.StatusCode;
+            OkObjectResult result = null;
 
-            Assert.AreEqual(StatusCode, StatusCodes.Status400BadRequest);
+            try
+            {
+                result = controller.PostBooking(bk).Result as OkObjectResult;
+            }
+            catch
+            {
+
+            }
+
+            Assert.IsNull(result);
 
         }
 
@@ -169,10 +209,9 @@ namespace GatewayTests
         {
             var controller = new RoomsController();
 
-            var result = controller.GetRoom(new Guid("07b073f2-754f-4f85-9425-ae758d267e2b"));//.Result as OkObjectResult;
+            var result = controller.GetRoom(new Guid("07b073f2-754f-4f85-9425-ae793d267e2b"));//.Result as OkObjectResult;
 
             Assert.IsNotNull(result);
-            //Assert.AreEqual(result.StatusCode, StatusCodes.Status200OK);
 
         }
 
@@ -188,14 +227,14 @@ namespace GatewayTests
         }
 
         [TestMethod]
-        public void PostRoomTestMethod_NotValid()
+        public void PostRoomTestMethod_Valid()
         {
 
             var controller = new RoomsController();
 
             var result = controller.PostRoom(Mock.Of<Room>()).Result as OkObjectResult;
 
-            Assert.IsFalse(result is OkObjectResult);
+            Assert.IsTrue(result is OkObjectResult);
 
         }
 
@@ -213,14 +252,30 @@ namespace GatewayTests
         private List<Customer> GetTestCustomers()
         {
             var testCustomers = new List<Customer>();
-            //testCustomers.Add(new Customer { CustomerId = new Guid("ce5a43e6-1d8d-47dd-a503-67a4ba3f3f31"), Name = "Darlene", Surname = "Johns", PhoneNumber = 3213883 });
-            //testCustomers.Add(new Customer { CustomerId = new Guid("15dc56f2-2dbd-42bd-84c3-dd0de5ac9cb8"), Name = "Mcgee", Surname = "Weeks", PhoneNumber = 9016332 });
-            //testCustomers.Add(new Customer { CustomerId = new Guid("11e40ea0-f928-4328-b600-d7d6ce784c4d"), Name = "Adkins", Surname = "Beach", PhoneNumber = 9016332 });
-            //testCustomers.Add(new Customer { CustomerId = new Guid("f05d8278-e37e-4c99-aae3-35a84f63cf02"), Name = "Bertha", Surname = "Tucker", PhoneNumber = 6377939 });
-            //testCustomers.Add(new Customer { CustomerId = new Guid("ea0543cc-61ab-4891-9877-a7a55cff3c80"), Name = "Holden", Surname = "Rivera", PhoneNumber = 4994753 });
+            testCustomers.Add(new Customer { CustomerId = new Guid("ce5a43e6-1d8d-47dd-a503-67a4ba3f3f31"), Name = "Darlene", Surname = "Johns", PhoneNumber = "+79932138831" });
+            testCustomers.Add(new Customer { CustomerId = new Guid("15dc56f2-2dbd-42bd-84c3-dd0de5ac9cb8"), Name = "Mcgee", Surname = "Weeks", PhoneNumber = "+79932138832" });
+            testCustomers.Add(new Customer { CustomerId = new Guid("11e40ea0-f928-4328-b600-d7d6ce784c4d"), Name = "Adkins", Surname = "Beach", PhoneNumber = "+79932138833" });
+            testCustomers.Add(new Customer { CustomerId = new Guid("f05d8278-e37e-4c99-aae3-35a84f63cf02"), Name = "Bertha", Surname = "Tucker", PhoneNumber = "+79932138834" });
+            testCustomers.Add(new Customer { CustomerId = new Guid("ea0543cc-61ab-4891-9877-a7a55cff3c80"), Name = "Holden", Surname = "Rivera", PhoneNumber = "+79932138835" });
+
 
             return testCustomers;
         }
+
+        private List<Booking> GetTestBookings()
+        {
+            var testBookings = new List<Booking>();
+            testBookings.Add(new Booking { BookingId = new Guid("07b073f2-754f-4f85-9425-ae758d267e2b"), CustomerId = new Guid("f05d8278-e37e-4c99-aae3-35a84f63cf02"), RoomId = new Guid("07b073f2-754f-4f85-9425-ae758d267e2b") });
+            return testBookings;
+        }
+
+        private List<Room> GetTestRooms()
+        {
+            var testRooms = new List<Room>();
+            testRooms.Add(new Room { RoomId = new Guid("07b073f2-754f-4f85-9425-ae793d267e2b"), Cost = 1500, Number = 90 });
+            return testRooms;
+        }
+
 
 
     }

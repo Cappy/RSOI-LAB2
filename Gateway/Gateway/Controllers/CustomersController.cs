@@ -44,7 +44,7 @@ namespace Gateway.Controllers
             try
             {
                 var stringContent = new StringContent(string.Empty);
-                string url = string.Format("http://localhost:4313/api/o/introspect/?token={0}", token);
+                string url = string.Format("http://localhost:4314/api/o/introspect/?token={0}", token);
                 introspect = await client.GetAsync(url);
             }
             catch

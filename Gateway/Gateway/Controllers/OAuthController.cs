@@ -66,8 +66,8 @@ namespace Gateway.Controllers
 
             var User = await user.Content.ReadAsAsync<OAuthResponse>();
 
-            return Ok(new
-            {
+            return Ok(
+                new {
                 Username = oUser.username,
                 access_token = User.access_token,
                 expires_in = User.expires_in,

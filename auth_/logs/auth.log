@@ -151,3 +151,40 @@ Bad Request: /o/token/
 Not Found: /external_app/
 "GET /external_app/?code=OQ7XgDmJocjDq3VQcithJb0d5fKX48&state=random_state_string HTTP/1.1" 404 2387
 "POST /o/token/?code=OQ7XgDmJocjDq3VQcithJb0d5fKX48&state=test&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&client_secret=lFdK0LM5UHADtfufmJrzSlzjGHCFeUbxNZCASPX1XtuhtWeM9mxDmUcZUd43iEV7HWjj2v6sU6muaNLO6OIoiwmiBUzBseYVNGnrE21AmsZEaNpxirCqusRmovv3NLs7&grant_type=authorization_code&redirect_uri=http://localhost:8030/external_app/ HTTP/1.1" 200 199
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=2wAt4TXJj6ritk1nkZgSmORmDI0WGF HTTP/1.1" 200 150
+"GET /o/introspect/?token=2wAt4TXJj6ritk1nkZgSmORmDI0WGF HTTP/1.1" 200 150
+"GET /o/introspect/?token=2wAt4TXJj6ritk1nkZgSmORmDI0WGF HTTP/1.1" 200 150
+"GET /o/introspect/?token=2wAt4TXJj6ritk1nkZgSmORmDI0WGF HTTP/1.1" 200 150
+"GET /o/introspect/?token=2wAt4TXJj6ritk1nkZgSmORmDI0WGF HTTP/1.1" 200 150
+"GET /o/introspect/?token=2wAt4TXJj6ritk1nkZgSmORmDI0WGF HTTP/1.1" 200 150
+"GET /o/authorize?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 301 0
+"GET /o/authorize?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 301 0
+"GET /o/authorize?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 301 0
+"GET /o/authorize/?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 200 3160
+"POST /o/authorize/?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 302 0
+Not Found: /external_app/
+"GET /external_app/?code=GVwJpK4MAdZOB5tJaScvaTAKGrRfg4&state=random_state_string HTTP/1.1" 404 2387
+"POST /o/token/?code=GVwJpK4MAdZOB5tJaScvaTAKGrRfg4&state=test&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&client_secret=lFdK0LM5UHADtfufmJrzSlzjGHCFeUbxNZCASPX1XtuhtWeM9mxDmUcZUd43iEV7HWjj2v6sU6muaNLO6OIoiwmiBUzBseYVNGnrE21AmsZEaNpxirCqusRmovv3NLs7&grant_type=authorization_code&redirect_uri=http://localhost:8030/external_app/ HTTP/1.1" 200 199
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+"GET /o/introspect/?token=2Rcvhuj7e9LHF0ztirRdDneJeZCsZr HTTP/1.1" 200 150
+"GET /o/introspect/?token=2Rcvhuj7e9LHF0ztirRdDneJeZCsZr HTTP/1.1" 200 150
+"GET /o/authorize?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 301 0
+"GET /o/authorize/?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 200 3160
+"POST /o/authorize/?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 302 0
+Not Found: /external_app/
+"GET /external_app/?code=RXvmME1Ww7AgHmcLVV88gj4keb2I5C&state=random_state_string HTTP/1.1" 404 2387
+"POST /o/token/?username=pavel&password=0JI4DyWek&client_id=8zyERnIoMHBr1i25cBEantNXoSEJvDOQNoIHTos8&client_secret=DazZrzBTJwZNa2nTkojv6Kceczp3kLDGBBvAzht9GwXEoDXF6IinHEOaTaVEemVPCJTSorrS8df0sMk1DpRtrKOsL89hqrThl8sjjGK7hhQVGHHIG32HNhFceqYqARMQ&grant_type=password HTTP/1.1" 200 182
+Bad Request: /o/token/
+"POST /o/token/?code=GVwJpK4MAdZOB5tJaScvaTAKGrRfg4&state=test&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&client_secret=lFdK0LM5UHADtfufmJrzSlzjGHCFeUbxNZCASPX1XtuhtWeM9mxDmUcZUd43iEV7HWjj2v6sU6muaNLO6OIoiwmiBUzBseYVNGnrE21AmsZEaNpxirCqusRmovv3NLs7&grant_type=authorization_code&redirect_uri=http://localhost:8030/external_app/ HTTP/1.1" 400 43
+"GET /o/authorize?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 301 0
+"GET /o/authorize/?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 200 3160
+"POST /o/authorize/?response_type=code&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&state=random_state_string HTTP/1.1" 302 0
+Not Found: /external_app/
+"GET /external_app/?code=lnxB55uadEiWZ9lvd2X8qR1ypgXtA7&state=random_state_string HTTP/1.1" 404 2387
+"POST /o/token/?code=lnxB55uadEiWZ9lvd2X8qR1ypgXtA7&state=test&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&client_secret=lFdK0LM5UHADtfufmJrzSlzjGHCFeUbxNZCASPX1XtuhtWeM9mxDmUcZUd43iEV7HWjj2v6sU6muaNLO6OIoiwmiBUzBseYVNGnrE21AmsZEaNpxirCqusRmovv3NLs7&grant_type=authorization_code&redirect_uri=http://localhost:8030/external_app/ HTTP/1.1" 200 199
+Bad Request: /o/token/
+"POST /o/token/?code=lnxB55uadEiWZ9lvd2X8qR1ypgXtA7&state=test&client_id=0mh1mikCHDta2acmMmHHI8XiJ07pPhdahQgZSloS&client_secret=lFdK0LM5UHADtfufmJrzSlzjGHCFeUbxNZCASPX1XtuhtWeM9mxDmUcZUd43iEV7HWjj2v6sU6muaNLO6OIoiwmiBUzBseYVNGnrE21AmsZEaNpxirCqusRmovv3NLs7&grant_type=authorization_code&redirect_uri=http://localhost:8030/external_app/ HTTP/1.1" 400 43
