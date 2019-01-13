@@ -11,6 +11,7 @@ using System.Net.Http.Headers;
 using System.Net;
 using Newtonsoft.Json;
 using Microsoft.Extensions.Primitives;
+using Gateway.RetryLogic;
 
 namespace Gateway.Controllers
 {
@@ -216,18 +217,58 @@ namespace Gateway.Controllers
                 return NotFound();
             }
 
-            string bookings = null;
+            HttpResponseMessage bookings = null;
 
             try
             {
-                bookings = await client.GetStringAsync(services.bookingsAPI);
+                bookings = await client.GetAsync(services.bookingsAPI);
             }
-            catch
+            catch { }
+
+            if (bookings == null)
             {
+                Retry.RetryUntilSuccess(async () =>
+                {
+                    try
+                    {
+                        bookings = await client.GetAsync(services.bookingsAPI);
+                        if (bookings.IsSuccessStatusCode)
+                        {
+                            try
+                            {
+                                var bkR = await bookings.Content.ReadAsAsync<List<Booking>>();
 
+                                foreach (Booking entr in bkR)
+                                {
+                                    if (entr.CustomerId == id)
+                                    {
+
+                                        HttpResponseMessage booking = await client.DeleteAsync(services.bookingsAPI + $"/{entr.BookingId}");
+
+                                    }
+                                }
+                            }
+                            catch { return false; }
+
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    catch { }
+                    return false;
+                });
+
+                return StatusCode(StatusCodes.Status200OK, new
+                {
+                    message = $"Booking service is offline"
+                });
             }
 
-            var bk = JsonConvert.DeserializeObject<List<Booking>>(bookings);
+
+            var bk = await bookings.Content.ReadAsAsync<List<Booking>>();
 
             try
             {
@@ -241,10 +282,7 @@ namespace Gateway.Controllers
                     }
                 }
             }
-            catch
-            {
-
-            }
+            catch { }
 
             return Ok(customer);
         }

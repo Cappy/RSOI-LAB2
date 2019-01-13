@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Authorization;
+using System.Net;
 
 namespace Gateway.Controllers
 {
@@ -70,6 +71,25 @@ namespace Gateway.Controllers
         [HttpPut("rooms/{id}")]
         public async Task<IActionResult> PutRoom(Guid id, [FromBody] Room roomModel)
         {
+            string err = string.Empty;
+
+            if (roomModel.Number <= 0)
+            {
+                err += "Number must be greater than 0. ";
+            }
+            if (roomModel.Cost <= 0)
+            {
+                err += "Cost must be greater than 0.";
+            }
+
+            if (err != "")
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, new
+                {
+                    err
+                });
+            }
+
             HttpResponseMessage room;
             try
             {
@@ -85,17 +105,35 @@ namespace Gateway.Controllers
                 return NotFound();
             }
 
-            //return Ok(client.GetStringAsync(customersAPI + $"/{id}"));
             return Ok();
         }
 
         [HttpPost("rooms")]
         public async Task<IActionResult> PostRoom([FromBody] Room roomModel)
         {
-            HttpResponseMessage room;
+            HttpResponseMessage room = null;
+            string err = string.Empty;
 
             Guid id = Guid.NewGuid();
             roomModel.RoomId = id;
+
+
+            if (roomModel.Number <= 0)
+                {
+                    err += "Number must be greater than 0. ";
+                }
+            if (roomModel.Cost <= 0)
+                {
+                    err += "Cost must be greater than 0.";
+                }
+
+            if (err != "")
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, new
+                {
+                    err
+                });
+            }
 
             try
             {
@@ -119,6 +157,28 @@ namespace Gateway.Controllers
         [HttpDelete("rooms/{id}")]
         public async Task<IActionResult> DeleteRoom(Guid id)
         {
+
+            Room RoomBU = new Room();
+            HttpResponseMessage roomBackup = null;
+            
+            //getting room info before deleteing
+            try
+            {
+                roomBackup = await client.GetAsync(services.gatewayAPI + $"/rooms/{id}");
+                RoomBU = await roomBackup.Content.ReadAsAsync<Room>();
+            }
+            catch
+            {
+                if (roomBackup.StatusCode != HttpStatusCode.ServiceUnavailable)
+                {
+                    return StatusCode(StatusCodes.Status404NotFound, new
+                    {
+                        err = string.Format("Room with ID {0} is not found in the DB, nothing to delete", id)
+                    });
+                }
+            }
+
+
             HttpResponseMessage room;
             try
             {
@@ -134,18 +194,23 @@ namespace Gateway.Controllers
                 return NotFound();
             }
 
-            string bookings = null;
+            HttpResponseMessage bookings = null;
 
             try
             {
-                bookings = await client.GetStringAsync(services.bookingsAPI);
+                bookings = await client.GetAsync(services.bookingsAPI);
             }
             catch
             {
+                var restoreRoom = await client.PostAsJsonAsync(services.gatewayAPI + "/rooms", RoomBU);
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, new
+                {
+                    err = "Rolled back: Booking service is unavailable."
+                });
 
             }
 
-            var bk = JsonConvert.DeserializeObject<List<Booking>>(bookings);
+            var bk = await bookings.Content.ReadAsAsync<List<Booking>>();
 
             try
             {
@@ -161,7 +226,11 @@ namespace Gateway.Controllers
             }
             catch
             {
-
+                var restoreRoom = await client.PostAsJsonAsync(services.gatewayAPI + "/rooms", RoomBU);
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, new
+                {
+                    err = "Rolled back: Booking service is unavailable."
+                });
             }
 
             return Ok(room);

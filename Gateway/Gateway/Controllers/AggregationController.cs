@@ -9,6 +9,7 @@ using Gateway.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using System.Net;
 
 namespace Gateway.Controllers
 {
@@ -49,23 +50,30 @@ namespace Gateway.Controllers
         [HttpGet("booking-with-info/{id}")]
         public async Task<IActionResult> GetBookingWithInfo(Guid id)
         {
-            string booking;
+            HttpResponseMessage booking;
             try
             {
-                booking = await client.GetStringAsync(services.bookingsAPI + $"/{id}");
+                booking = await client.GetAsync(services.bookingsAPI + $"/{id}");
             }
             catch
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable);
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, new
+                {
+                    err = "Booking service is unavailable"
+                });
             }
 
-            if (booking == null)
+            if (booking.StatusCode == HttpStatusCode.NotFound)
             {
-                return NotFound();
+                return StatusCode(StatusCodes.Status404NotFound, new
+                {
+                    err = string.Format("Booking with ID {0} is not found in the DB", id)
+                });
             }
 
             // var bk = JsonConvert.DeserializeObject<List<Booking>>(booking);
-             Booking bk = JsonConvert.DeserializeObject<Booking>(booking);
+            //Booking bk = JsonConvert.DeserializeObject<Booking>(booking.Content.);
+            Booking bk = await booking.Content.ReadAsAsync<Booking>();
 
             string customer = "";
             string room = "";
@@ -141,14 +149,17 @@ namespace Gateway.Controllers
         [HttpGet("bookings-with-info")]
         public async Task<IActionResult> GetBookings(int? page, int? size)
         {
-            string bookings;
+            HttpResponseMessage bookings;
             try
             {
-                bookings = await client.GetStringAsync(services.bookingsAPI + $"?page={page}&size={size}");
+                bookings = await client.GetAsync(services.bookingsAPI + $"?page={page}&size={size}");
             }
             catch
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable);
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, new
+                {
+                    err = "Booking service is unavailable (503) [API message]"
+                });
             }
 
             if (bookings == null)
@@ -157,7 +168,9 @@ namespace Gateway.Controllers
             }
 
             // var bk = JsonConvert.DeserializeObject<List<Booking>>(booking);
-            var Bookings = JsonConvert.DeserializeObject<List<Booking>>(bookings);
+            //var Bookings = JsonConvert.DeserializeObject<List<Booking>>(bookings);
+
+            var Bookings = await bookings.Content.ReadAsAsync<List<Booking>>();
 
             string customer = "";
             string room = "";
